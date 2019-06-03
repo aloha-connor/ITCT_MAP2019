@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentEntities>
+
+    <AssignmentEntity id = "0" type = "computer">
+        <floor>3</floor>
+        <shape>
+            <point x = "5.0" y = "6.0" />
+            <radius r = "3.0"/>
+        </shape>
+        <assignments>
+            <assignment id = "0" />
+        </assignments>
+    </AssignmentEntity>
+
+    <AssignmentEntity id = "1" type = "wall">
+        <floor>2</floor>
+        <shape>
+            <point x = "9.0" y = "10.0" />
+            <point x = "15.0" y = "16.0" />
+        </shape>
+        <assignments>
+            <assignment id = "1" />
+            <assignment id = "2" />
+        </assignments>
+    </AssignmentEntity>
+
+</AssignmentEntities>
