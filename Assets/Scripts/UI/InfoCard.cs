@@ -13,16 +13,19 @@ namespace ITCT
 
 		public static float gap = 9.5f;
 
+		public InfoListViewer myViewer;
+
 		protected Vector2 defaultSize ;
 
-		public void InitializeInfoCard(int _id, int _listOrder, Transform parent, InfoListViewer viewer)
+		public void InitializeInfoCard(int _id, int _listOrder, Transform parent, InfoListViewer _viewer)
 		{
 			transform.SetParent(parent) ;
 			id = _id;
 			listOrder = _listOrder;
 			defaultSize = GetComponent<RectTransform>().sizeDelta;
+			myViewer = _viewer;
 
-			viewer.SubjectRemap.AsObservable()
+			myViewer.SubjectRemap.AsObservable()
 				.Subscribe(__ => Remap());
 		}
 

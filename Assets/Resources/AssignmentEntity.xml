@@ -2,7 +2,7 @@
 <AssignmentEntities>
 
     <AssignmentEntity id = "0" type = "computer">
-        <floor>3</floor>
+        <floor>1</floor>
         <shape>
             <point x = "5.0" y = "6.0" />
             <radius r = "3.0"/>
@@ -13,7 +13,7 @@
     </AssignmentEntity>
 
     <AssignmentEntity id = "1" type = "wall">
-        <floor>2</floor>
+        <floor>1</floor>
         <shape>
             <point x = "9.0" y = "10.0" />
             <point x = "15.0" y = "16.0" />

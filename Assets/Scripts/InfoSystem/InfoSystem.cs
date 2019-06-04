@@ -11,30 +11,44 @@ namespace ITCT
     {
 		public AssignmentSystem assignmentSystem;
 
-		public Subject<IEnumerable<int>> SubjectQueriedAssignmentsChanged {get; protected set;}
+		public Subject<ICollection<int>> SubjectQueriedAssignmentsChanged {get; protected set;}
+		
+		public Subject<int> SubjectSelectedInfoCardChanged {get; protected set;}
 
 		public InputField searchInputField;
 
 		void Awake()
 		{
-			SubjectQueriedAssignmentsChanged = new Subject<IEnumerable<int>>();
+			SubjectQueriedAssignmentsChanged = new Subject<ICollection<int>>();
+			SubjectSelectedInfoCardChanged = new Subject<int>();
+		}
+
+		void Start()
+		{
+			InfoCardSelected(-1);
 		}
 
 		public void Search()
 		{
-			UpdateHighlighted(QueryByName(searchInputField.text));
+			UpdateQueried(QueryByName(searchInputField.text));
 		}
 
-		protected void UpdateHighlighted(IEnumerable<int> idlist)
+		public void InfoCardSelected(int id)
+		{
+			SubjectSelectedInfoCardChanged.OnNext(id);
+		}
+
+		protected void UpdateQueried(ICollection<int> idlist)
 		{
 			SubjectQueriedAssignmentsChanged.OnNext(idlist);
 		}
 
-		protected IEnumerable<int> QueryByName(string _name)
+		protected ICollection<int> QueryByName(string _name)
 		{
 			return assignmentSystem.assignmentList
 					.Where(a => a.teamMates.Contains(_name))
-					.Select(a => a.id) ;
+					.Select(a => a.id)
+					.ToList() ;
 		}
     }
 }
