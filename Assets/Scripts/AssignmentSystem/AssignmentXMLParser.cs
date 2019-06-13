@@ -31,7 +31,9 @@ namespace ITCT
                 newAss.assignmentEntityID = IntParseNode(node,"entityID");
                 newAss.title = node.SelectSingleNode("title").InnerText;
                 newAss.comment = node.SelectSingleNode("comment").InnerText;
+                newAss.conceptComment = node.SelectSingleNode("conceptComment").InnerText;
                 newAss.teamMates = new List<string>();
+                newAss.assignmentTagMask = GetAssignmentTagMask(node);
                 XmlNodeList teamMatesList = node.SelectNodes("teammates/person");
                 foreach(XmlNode mate in teamMatesList) newAss.teamMates.Add(mate.InnerText);
                 result.Add(newAss);
@@ -43,6 +45,25 @@ namespace ITCT
         private int IntParseNode(XmlNode parent, string nodeName)
         {
             return int.Parse(parent.SelectSingleNode(nodeName).InnerText);
+        }
+
+        private int GetAssignmentTagMask(XmlNode parent)
+        {
+            int result = 0;
+            XmlNodeList list = parent.SelectNodes("tag");
+            foreach(XmlNode n in list)
+            {
+                string inner = n.InnerText;
+                int shift =
+                    inner.Equals("poster") ? (int)AssignmentTag.poster :
+                    inner.Equals("video") ? (int)AssignmentTag.video :
+                    inner.Equals("prototype") ? (int)AssignmentTag.prototype :
+                    inner.Equals("game") ? (int)AssignmentTag.game :
+                    inner.Equals("web") ?(int) AssignmentTag.web :
+                    inner.Equals("installation") ? (int)AssignmentTag.installation : 32;
+                result |= 1 << shift;
+            }
+            return result;
         }
     }
 }

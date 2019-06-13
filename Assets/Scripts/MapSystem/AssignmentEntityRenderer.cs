@@ -90,7 +90,7 @@ namespace ITCT
                     queried.Value = flag ;
                 }).AddTo(compDisp);
 
-            infoSystem.SubjectSelectedInfoCardChanged.AsObservable()
+            infoSystem.SelectedAssignmentID.AsObservable()
                 .Subscribe(_id => {
                     selected.Value = myEntity.assignmentIDList.Contains(_id) ;
                 }) ;

@@ -8,22 +8,32 @@ namespace ITCT
 {
     public class InfoCard : MonoBehaviour
     {
-        public int id ;
+        public ReactiveProperty<int> id ;
 		public int listOrder;
+		public int classOrder;
+		public bool isClass;
 
 		public static float gap = 9.5f;
 
 		public InfoListViewer myViewer;
 
-		protected Vector2 defaultSize ;
+		public static Vector2 defaultSize = new Vector2(403.4f,135f);
+		public static Vector2 classSize = new Vector2(403.4f,55f);
+
+		void Awake()
+		{
+			id = new ReactiveProperty<int>(-1);
+		}
 
 		public void InitializeInfoCard(int _id, int _listOrder, Transform parent, InfoListViewer _viewer)
 		{
 			transform.SetParent(parent) ;
-			id = _id;
+			GetComponent<RectTransform>().anchoredPosition = 
+				new Vector2(gap + defaultSize.x/2, -gap + defaultSize.y);
+			GetComponent<RectTransform>().localScale = new Vector3(1,1,1);
 			listOrder = _listOrder;
-			defaultSize = GetComponent<RectTransform>().sizeDelta;
 			myViewer = _viewer;
+			id.Value = _id;
 
 			myViewer.SubjectRemap.AsObservable()
 				.Subscribe(__ => Remap());
@@ -35,14 +45,19 @@ namespace ITCT
 			if(listOrder < 0)
 			{
 				Vector2 targetSize = Vector2.zero;
-				t.DOSizeDelta(targetSize,.5f)
+				t.DOScale(targetSize,.5f)
 					.SetEase(Ease.InOutCubic);
 			}
 			else
 			{
-				t.DOSizeDelta(defaultSize,.5f)
+				Vector2 targetSize = new Vector2(1,1);//isClass ? classSize : defaultSize;
+				t.DOScale(targetSize,.5f)
 					.SetEase(Ease.InOutCubic);
-				Vector2 targetPos = new Vector2(gap + defaultSize.x/2, -((gap + defaultSize.y) * listOrder + gap + defaultSize.y/2));
+
+				Vector2 targetPos = new Vector2(gap + defaultSize.x/2, 
+					-((gap/2 + defaultSize.y) * listOrder + gap/2 + defaultSize.y/2));
+				targetPos = targetPos + new Vector2(0, classSize.y * (classOrder+1));
+				if(isClass) targetPos = targetPos - new Vector2(0, classSize.y/1.6f);
 				t.DOAnchorPos(targetPos,.5f)
 					.SetEase(Ease.InOutCubic);
 			}

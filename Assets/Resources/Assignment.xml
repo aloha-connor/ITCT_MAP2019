@@ -8,36 +8,57 @@
         <classID>0</classID>
         <title>테스트용 과제</title>
         <comment>테스트로 만들어보았다</comment>
+        <conceptComment>소오오오오름</conceptComment>
         <teammates>
             <person>강건우</person>
             <person>강건우의 컴공 자아</person>
             <person>강건우의 정문 자아</person>
         </teammates>
+        <tag>game</tag>
     </Assignment>
 
     <Assignment id = "1">
         <floor>2</floor>
         <room>202</room>
         <entityID>0</entityID>
-        <classID>0</classID>
+        <classID>1</classID>
         <title>테스트용 과제2</title>
         <comment>테스트2로 만들어보았다</comment>
+        <conceptComment>소오오오오름</conceptComment>
         <teammates>
             <person>강건우</person>
             <person>강건우의 자전 자아</person>
         </teammates>
+        <tag>poster</tag>
     </Assignment>
     
     <Assignment id = "2">
         <floor>2</floor>
         <room>202</room>
         <entityID>0</entityID>
-        <classID>0</classID>
+        <classID>2</classID>
         <title>테스트용 과제3</title>
         <comment>테스트3로 만들어보았다</comment>
+        <conceptComment>소오오오오름</conceptComment>
         <teammates>
             <person>강건우가 아닌 것</person>
         </teammates>
+        <tag>poster</tag>
+    </Assignment>
+
+    <Assignment id = "3">
+        <floor>2</floor>
+        <room>202</room>
+        <entityID>0</entityID>
+        <classID>2</classID>
+        <title>테스트용 과제3</title>
+        <comment>테스트3로 만들어보았다</comment>
+        <conceptComment>소오오오오름</conceptComment>
+        <teammates>
+            <person>강건우가 아닌 것</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
     </Assignment>
 
 </Assignments>

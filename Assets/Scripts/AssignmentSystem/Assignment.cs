@@ -16,5 +16,12 @@ namespace ITCT
         public string title;
         public List<string> teamMates;
         public string comment;
+        public string conceptComment;
+        public int assignmentTagMask;
+    }
+
+    public enum AssignmentTag
+    {
+        poster = 0, video = 1, prototype = 2, game = 3, web = 4, installation = 5
     }
 }
