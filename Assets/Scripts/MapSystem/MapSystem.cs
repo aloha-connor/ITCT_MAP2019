@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
+
 namespace ITCT
 {
     public class MapSystem : MonoBehaviour
@@ -11,6 +13,9 @@ namespace ITCT
         public InfoSystem infoSystem;
         public Dictionary<int, AssignmentEntity> assignmentEntityDictionary;
 
+        public Subject<AssignmentEntityRenderer> SubjectAssignmentEntityRendererSelected;
+        public Subject<int> SubjectAssignmentEntityModified;
+
         protected AssignmentEntityXMLParser xmlParser;
 
         void Awake()
@@ -18,6 +23,8 @@ namespace ITCT
             xmlParser = new AssignmentEntityXMLParser();
             TextAsset xmlText = (TextAsset)Resources.Load("AssignmentEntity");
             assignmentEntityDictionary = MakeDictionary(xmlParser.ParseXML(xmlText));
+            SubjectAssignmentEntityRendererSelected = new Subject<AssignmentEntityRenderer>();
+            SubjectAssignmentEntityModified = new Subject<int>();
         }
 
         void Start()
@@ -42,6 +49,11 @@ namespace ITCT
                 }
                 newAERenderer.Initialize(kv.Key, infoSystem, this);
             }
+        }
+
+        public void SelectAssignmentEntityRenderer(AssignmentEntityRenderer r)
+        {
+            SubjectAssignmentEntityRendererSelected.OnNext(r);
         }
 
         protected Dictionary<int, AssignmentEntity> MakeDictionary(List<AssignmentEntity> list)

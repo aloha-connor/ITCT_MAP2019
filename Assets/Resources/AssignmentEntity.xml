@@ -16,7 +16,8 @@
         <floor>1</floor>
         <shape>
             <point x = "9.0" y = "10.0" />
-            <point x = "15.0" y = "16.0" />
+            <radius r = "3.0"/>
+            <theta t = "150.0"/>
         </shape>
         <assignments>
             <assignment id = "1" />

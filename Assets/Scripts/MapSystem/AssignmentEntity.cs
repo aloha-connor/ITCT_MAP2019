@@ -17,8 +17,8 @@ namespace ITCT
         public int floor;
 
         public Vector2 pos;
-        public Vector2 pos2;
         public float radius;
+        public float theta;
 
         public List<int> assignmentIDList = new List<int>();
     }

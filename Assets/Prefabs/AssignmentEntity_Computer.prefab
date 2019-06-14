@@ -36,6 +36,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4543582861880026}
   - component: {fileID: 114457282614577812}
+  - component: {fileID: 114017192106163522}
+  - component: {fileID: 114674818636750990}
+  - component: {fileID: 58982914997815264}
   m_Layer: 0
   m_Name: AssignmentEntity_Computer
   m_TagString: Untagged
@@ -50,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1435346886595982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33, y: 8.08, z: 0}
+  m_LocalPosition: {x: 6.736846, y: -4.565705, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4562077355351234}
@@ -70,6 +73,32 @@ Transform:
   m_Father: {fileID: 4543582861880026}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58982914997815264
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1435346886595982}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &114017192106163522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1435346886595982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deaa5c4e011594e4a90e6cc4bedf6c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114457282614577812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,6 +112,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aeID: 0
   infoSystem: {fileID: 0}
+  mapSystem: {fileID: 0}
+  myType: 0
+--- !u!114 &114674818636750990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1435346886595982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!212 &212245694497203610
 SpriteRenderer:
   m_ObjectHideFlags: 1

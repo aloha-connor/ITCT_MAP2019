@@ -21,79 +21,98 @@ namespace ITCT
         void Start()
         {
             queried.AsObservable()
-                .Subscribe(flag => {
+                .Subscribe(flag =>
+                {
                     Color targetColor = flag ? Color.red : Color.black;
-                    if(myType == AEType.computer) 
-                    {
-                        GetComponentInChildren<SpriteRenderer>()
-                            .DOColor(targetColor, 0.5f);
-                    }
-                    else 
-                    {
-                        Color currentcolor = GetComponentInChildren<LineRenderer>().startColor;
-                        GetComponentInChildren<LineRenderer>()
-                            .DOColor(new Color2(currentcolor, currentcolor), new Color2(targetColor, targetColor), 0.5f);
-                    }
+                    GetComponentInChildren<SpriteRenderer>()
+                        .DOColor(targetColor, 0.5f);
+                    // if (myType == AEType.computer)
+                    // {
+                    //     GetComponentInChildren<SpriteRenderer>()
+                    //         .DOColor(targetColor, 0.5f);
+                    // }
+                    // else
+                    // {
+                    //     Color currentcolor = GetComponentInChildren<LineRenderer>().startColor;
+                    //     GetComponentInChildren<LineRenderer>()
+                    //         .DOColor(new Color2(currentcolor, currentcolor), new Color2(targetColor, targetColor), 0.5f);
+                    // }
                 });
 
             selected.AsObservable()
-                .Subscribe(flag => {
+                .Subscribe(flag =>
+                {
                     Color targetColor = flag ? Color.yellow : queried.Value ? Color.red : Color.black;
-                    if(myType == AEType.computer) 
-                    {
-                        GetComponentInChildren<SpriteRenderer>()
-                            .DOColor(targetColor, 0.5f);
-                    }
-                    else 
-                    {
-                        Color currentcolor = GetComponentInChildren<LineRenderer>().startColor;
-                        GetComponentInChildren<LineRenderer>()
-                            .DOColor(new Color2(currentcolor, currentcolor), new Color2(targetColor, targetColor), 0.5f);
-                    }
+                    GetComponentInChildren<SpriteRenderer>()
+                        .DOColor(targetColor, 0.5f);
+                    // if (myType == AEType.computer)
+                    // {
+                    //     GetComponentInChildren<SpriteRenderer>()
+                    //         .DOColor(targetColor, 0.5f);
+                    // }
+                    // else
+                    // {
+                    //     Color currentcolor = GetComponentInChildren<LineRenderer>().startColor;
+                    //     GetComponentInChildren<LineRenderer>()
+                    //         .DOColor(new Color2(currentcolor, currentcolor), new Color2(targetColor, targetColor), 0.5f);
+                    // }
                 });
         }
 
         public void Initialize(int _aeID, InfoSystem _is, MapSystem _ms)
         {
             aeID = _aeID;
-            infoSystem = _is ;
-            mapSystem = _ms ;
+            infoSystem = _is;
+            mapSystem = _ms;
             compDisp.Clear();
 
             AssignmentEntity myEntity = mapSystem.assignmentEntityDictionary[aeID];
 
-            transform.parent = mapSystem.floorList[myEntity.floor - 1].transform ;
+            transform.parent = mapSystem.floorList[myEntity.floor - 1].transform;
+            transform.localPosition = myEntity.pos;
 
-            if(myEntity.aeType == AEType.computer)
+            if (myEntity.aeType == AEType.computer)
             {
-                transform.localPosition = myEntity.pos;
             }
             else
             {
-                LineRenderer lr = GetComponentInChildren<LineRenderer>();
-                transform.localPosition = Vector2.zero;
-                lr.SetPosition(0, myEntity.pos);
-                lr.SetPosition(1, myEntity.pos2);
+                SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, myEntity.theta));
+                sr.size = new Vector2(myEntity.radius, sr.size.y);
+                GetComponentInChildren<BoxCollider2D>().size = sr.size;
             }
 
+            mapSystem.SubjectAssignmentEntityModified.AsObservable()
+                .Where(id => id == aeID)
+                .Subscribe(id => {
+                    Initialize(id, infoSystem, mapSystem);
+                }).AddTo(compDisp);
+
             infoSystem.SubjectQueriedAssignmentsChanged.AsObservable()
-                .Subscribe(l => {
+                .Subscribe(l =>
+                {
                     bool flag = false;
-                    foreach(int _id in l)
+                    foreach (int _id in l)
                     {
-                        if(myEntity.assignmentIDList.Contains(_id))
+                        if (myEntity.assignmentIDList.Contains(_id))
                         {
-                            flag = true ;
+                            flag = true;
                             break;
                         }
                     }
-                    queried.Value = flag ;
+                    queried.Value = flag;
                 }).AddTo(compDisp);
 
             infoSystem.SelectedAssignmentID.AsObservable()
-                .Subscribe(_id => {
-                    selected.Value = myEntity.assignmentIDList.Contains(_id) ;
-                }) ;
+                .Subscribe(_id =>
+                {
+                    selected.Value = myEntity.assignmentIDList.Contains(_id);
+                }).AddTo(compDisp);
+        }
+
+        public void Reinitialize(int id)
+        {
+            Initialize(id, infoSystem, mapSystem);
         }
     }
 }

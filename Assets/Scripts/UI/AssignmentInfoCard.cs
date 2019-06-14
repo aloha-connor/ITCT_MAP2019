@@ -37,11 +37,15 @@ namespace ITCT
         {
             EventTrigger.Entry pointerEnter = new EventTrigger.Entry();
             pointerEnter.eventID = EventTriggerType.PointerEnter;
-            pointerEnter.callback.AddListener((eventData) => { transform.DOScale(new Vector3(1.02f,1.02f,1.02f), .2f).SetEase(Ease.InOutCubic);});
+            pointerEnter.callback.AddListener((eventData) => { 
+                transform.DOScale(new Vector3(1.02f,1.02f,1.02f), .2f).SetEase(Ease.OutCubic);
+            });
 
             EventTrigger.Entry pointerExit = new EventTrigger.Entry();
             pointerExit.eventID = EventTriggerType.PointerExit;
-            pointerExit.callback.AddListener((eventData) => { transform.DOScale(new Vector3(1f,1f,1f), .2f).SetEase(Ease.InOutCubic);});
+            pointerExit.callback.AddListener((eventData) => { 
+                transform.DOScale(new Vector3(1f,1f,1f), .2f).SetEase(Ease.OutCubic);
+            });
 
             myButtonTrigger.triggers.Add(pointerEnter);
             myButtonTrigger.triggers.Add(pointerExit);
@@ -75,7 +79,6 @@ namespace ITCT
             if (((1 << (int)AssignmentTag.installation) & tagMask) > 0) tagList.Add(GameObject.Instantiate(installTag, tags));
             for (int i = 0; i < tagList.Count; i++)
             {
-                Debug.Log(offset);
                 tagList[i].transform.localPosition = new Vector2(offset, 0);
                 offset += gap + ((RectTransform)tagList[i].transform).sizeDelta.x;
             }
