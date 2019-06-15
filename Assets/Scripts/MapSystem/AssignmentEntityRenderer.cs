@@ -23,39 +23,17 @@ namespace ITCT
             queried.AsObservable()
                 .Subscribe(flag =>
                 {
-                    Color targetColor = flag ? Color.red : Color.black;
+                    Color targetColor = flag ? Color.red : Color.white;
                     GetComponentInChildren<SpriteRenderer>()
                         .DOColor(targetColor, 0.5f);
-                    // if (myType == AEType.computer)
-                    // {
-                    //     GetComponentInChildren<SpriteRenderer>()
-                    //         .DOColor(targetColor, 0.5f);
-                    // }
-                    // else
-                    // {
-                    //     Color currentcolor = GetComponentInChildren<LineRenderer>().startColor;
-                    //     GetComponentInChildren<LineRenderer>()
-                    //         .DOColor(new Color2(currentcolor, currentcolor), new Color2(targetColor, targetColor), 0.5f);
-                    // }
                 });
 
             selected.AsObservable()
                 .Subscribe(flag =>
                 {
-                    Color targetColor = flag ? Color.yellow : queried.Value ? Color.red : Color.black;
+                    Color targetColor = flag ? Color.yellow : queried.Value ? Color.red : Color.white;
                     GetComponentInChildren<SpriteRenderer>()
                         .DOColor(targetColor, 0.5f);
-                    // if (myType == AEType.computer)
-                    // {
-                    //     GetComponentInChildren<SpriteRenderer>()
-                    //         .DOColor(targetColor, 0.5f);
-                    // }
-                    // else
-                    // {
-                    //     Color currentcolor = GetComponentInChildren<LineRenderer>().startColor;
-                    //     GetComponentInChildren<LineRenderer>()
-                    //         .DOColor(new Color2(currentcolor, currentcolor), new Color2(targetColor, targetColor), 0.5f);
-                    // }
                 });
         }
 
@@ -68,7 +46,7 @@ namespace ITCT
 
             AssignmentEntity myEntity = mapSystem.assignmentEntityDictionary[aeID];
 
-            transform.parent = mapSystem.floorList[myEntity.floor - 1].transform;
+            transform.parent = mapSystem.coordinate;//mapSystem.floorList[myEntity.floor - 1].transform;
             transform.localPosition = myEntity.pos;
 
             if (myEntity.aeType == AEType.computer)
@@ -81,6 +59,13 @@ namespace ITCT
                 sr.size = new Vector2(myEntity.radius, sr.size.y);
                 GetComponentInChildren<BoxCollider2D>().size = sr.size;
             }
+
+            mapSystem.currentFloor.AsObservable()
+                .Subscribe(f => {
+                    Vector2 targetScale = InCurrentFloor() ? new Vector2(1,1) : Vector2.zero;
+                    transform.DOScale(targetScale, .8f)
+                        .SetEase(Ease.InOutElastic);
+                }).AddTo(compDisp);
 
             mapSystem.SubjectAssignmentEntityModified.AsObservable()
                 .Where(id => id == aeID)
@@ -113,6 +98,11 @@ namespace ITCT
         public void Reinitialize(int id)
         {
             Initialize(id, infoSystem, mapSystem);
+        }
+
+        public bool InCurrentFloor()
+        {
+            return mapSystem.assignmentEntityDictionary[aeID].floor == mapSystem.currentFloor.Value;
         }
     }
 }

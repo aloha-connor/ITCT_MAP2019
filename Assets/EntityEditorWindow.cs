@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
+using UniRx.Triggers;
 using UnityEngine.UI;
 
 namespace ITCT
@@ -21,6 +22,13 @@ namespace ITCT
         public InputField posY;
         public InputField assignments;
 
+        protected CompositeDisposable compDisp ;
+
+        void Awake()
+        {
+            compDisp = new CompositeDisposable();
+        }
+        
         void Start()
         {
 			transform.localScale = new Vector2(0, 0);
@@ -30,11 +38,22 @@ namespace ITCT
                     LoadAssEntity(entity);
                     transform.localScale = new Vector2(1, 1);
                 });
+
+            editorSystem.currentMode.AsObservable()
+                .Subscribe(mode => {
+                    InputField[] fields = GetComponentsInChildren<InputField>();
+                    foreach(InputField f in fields)
+                    {
+                        f.readOnly = !(mode == EditorSystem.EditMode.VALUES) ;
+                    }
+                });
         }
 
         protected void LoadAssEntity(AssignmentEntityRenderer entityRenderer)
         {
 			Debug.Log("dd");
+            compDisp.Clear();
+
 			currentRenderer = entityRenderer;
 			currentEntity = entityRenderer.mapSystem.assignmentEntityDictionary[entityRenderer.aeID] ;
             id.text = currentEntity.aeID.ToString();
@@ -46,13 +65,60 @@ namespace ITCT
             string a = "";
             foreach (int i in currentEntity.assignmentIDList) a += i + " ";
             assignments.text = a;
+
+            Observable
+                .CombineLatest(posX.ObserveEveryValueChanged(__ => __.text), posY.ObserveEveryValueChanged(__ => __.text))
+                .Where(__ => editorSystem.currentMode.Value == EditorSystem.EditMode.VALUES)
+                .Subscribe(_pos => {
+                    float pos0, pos1;
+                    bool canParse;
+                    canParse = float.TryParse(_pos[0], out pos0) ;
+                    canParse = float.TryParse(_pos[1], out pos1) && canParse;
+                    if(canParse) currentRenderer.transform.localPosition = new Vector2(pos0, pos1);
+                }).AddTo(compDisp);
+
+            rot.ObserveEveryValueChanged(__ => __.text)
+                .Where(__ => editorSystem.currentMode.Value == EditorSystem.EditMode.VALUES)
+                .Subscribe(_rot => {
+                    float rotOut ;
+                    if(float.TryParse(_rot, out rotOut)) currentRenderer.transform.rotation = Quaternion.Euler(0,0,rotOut);
+                });
+                
+            rad.ObserveEveryValueChanged(__ => __.text)
+                .Where(__ => currentRenderer.myType == AEType.wall)
+                .Where(__ => editorSystem.currentMode.Value == EditorSystem.EditMode.VALUES)
+                .Subscribe(_rad => {
+                    float radOut ;
+                    if(float.TryParse(_rad, out radOut))
+                        currentRenderer.GetComponentInChildren<SpriteRenderer>().size = 
+                            new Vector2(radOut, currentRenderer.GetComponentInChildren<SpriteRenderer>().size.y);
+                });
+
+            entityRenderer.ObserveEveryValueChanged(__ => __.transform.localPosition)
+                .Where(__ => editorSystem.currentMode.Value == EditorSystem.EditMode.TRANSFORM)
+                .Subscribe(pos => {
+                    posX.text = pos.x.ToString();
+                    posY.text = pos.y.ToString();
+                }).AddTo(compDisp);
+            
+            entityRenderer.ObserveEveryValueChanged(__ => __.transform.localEulerAngles)
+                .Where(__ => editorSystem.currentMode.Value == EditorSystem.EditMode.TRANSFORM)
+                .Subscribe(_rot => {
+                    rot.text = _rot.z.ToString();
+                }).AddTo(compDisp);
+
+            currentRenderer.GetComponentInChildren<SpriteRenderer>().ObserveEveryValueChanged(__ => __.size)
+                .Where(__ => editorSystem.currentMode.Value == EditorSystem.EditMode.TRANSFORM)
+                .Subscribe(_size => {
+                    rad.text = _size.x.ToString();
+                }).AddTo(compDisp);
         }
 
         public void SaveAssEntity()
         {
 			if(!CheckValid()) 
 			{
-				Debug.Log("Cannot");
+				Debug.Log("Cannot Save!");
 				return;
 			}
 			int newId = int.Parse(id.text);
@@ -73,8 +139,6 @@ namespace ITCT
 				if(!s.Equals("")) newList.Add(int.Parse(s));
 			}
             currentEntity.assignmentIDList = newList;
-
-			currentRenderer.Reinitialize(newId);
         }
 
 		protected bool CheckValid()
@@ -108,13 +172,16 @@ namespace ITCT
 
         public void CloseWindow()
         {
+			currentRenderer.Reinitialize(currentEntity.aeID);
+            compDisp.Clear();
             transform.localScale = Vector2.zero;
+            editorSystem.EditorWindowClosed();
         }
 
         public void SaveAndCloseWindow()
         {
 			SaveAssEntity();
-            transform.localScale = Vector2.zero;
+            CloseWindow();
         }
     }
 
