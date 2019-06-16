@@ -25,6 +25,8 @@ namespace ITCT
         public AssignmentEntityRenderer assCompPrefab;
         public AssignmentEntityRenderer assWallPrefab;
 
+        public Subject<string> SubjectWarningMessage;
+
         private Vector3 mousePos;
 
         public enum EditMode
@@ -37,6 +39,7 @@ namespace ITCT
             editorOn = new ReactiveProperty<bool>(false);
             currentMode = new ReactiveProperty<EditMode>(EditMode.NONE);
             SubjectAssignmentEntityRendererSelected_Edit = new Subject<AssignmentEntityRenderer>();
+            SubjectWarningMessage = new Subject<string>();
         }
 
         // Use this for initialization
@@ -51,6 +54,7 @@ namespace ITCT
 
             this.UpdateAsObservable()
                 .Where(__ => editorOn.Value)
+                .Where(__ => currentMode.Value == EditMode.NONE)
                 .Where(__ => Input.GetKeyDown(KeyCode.F3))
                 .Subscribe(__ =>
                 {
@@ -59,6 +63,7 @@ namespace ITCT
 
             this.UpdateAsObservable()
                 .Where(__ => editorOn.Value)
+                .Where(__ => currentMode.Value == EditMode.NONE)
                 .Where(__ => Input.GetKeyDown(KeyCode.F4))
                 .Subscribe(__ =>
                 {
@@ -69,22 +74,22 @@ namespace ITCT
                 .Where(__ => this.currentMode.Value == EditMode.TRANSFORM)
                 .Subscribe(__ =>
                 {
-                    if (Input.GetKey(KeyCode.Alpha1))
+                    if (Input.GetKey(KeyCode.A))
                     {
                         Vector3 screenToWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                         selectedEntity.transform.position = new Vector3(screenToWorld.x, screenToWorld.y, selectedEntity.transform.position.z);
                     }
-                    if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3))
+                    if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
                     {
                         mousePos = Input.mousePosition;
                     }
-                    else if (Input.GetKey(KeyCode.Alpha2))
+                    else if (Input.GetKey(KeyCode.S))
                     {
                         float deltaY = Input.mousePosition.y - mousePos.y;
                         selectedEntity.transform.Rotate(0, 0, deltaY * Time.deltaTime * 10);
                         mousePos = Input.mousePosition;
                     }
-                    else if (Input.GetKey(KeyCode.Alpha3))
+                    else if (Input.GetKey(KeyCode.D))
                     {
                         float deltaX = Input.mousePosition.x - mousePos.x;
                         Vector2 size = selectedEntity.GetComponentInChildren<SpriteRenderer>().size;
@@ -130,12 +135,12 @@ namespace ITCT
         {
             AssignmentEntity newEntity = new AssignmentEntity();
             int newID = 1000;
-            while(mapSystem.assignmentEntityDictionary.ContainsKey(newID)) newID++ ;
+            while (mapSystem.assignmentEntityDictionary.ContainsKey(newID)) newID++;
             newEntity.aeID = newID;
             newEntity.aeType = _type;
             newEntity.floor = mapSystem.currentFloor.Value;
             newEntity.pos = Vector2.zero;
-            newEntity.radius = 3;
+            newEntity.radius = .5f;
             newEntity.theta = 0;
 
             mapSystem.assignmentEntityDictionary.Add(newEntity.aeID, newEntity);
@@ -145,12 +150,30 @@ namespace ITCT
                 GameObject.Instantiate(assWallPrefab, mapSystem.coordinate);
 
             newRenderer.Initialize(newEntity.aeID, infoSystem, mapSystem);
+
+            mapSystem.SelectAssignmentEntityRenderer(newRenderer);
         }
 
         public void EditorWindowClosed()
         {
             currentMode.Value = EditMode.NONE;
             selectedEntity = null;
+        }
+
+        public void SendWarningMessage(string s)
+        {
+            SubjectWarningMessage.OnNext(s);
+        }
+
+        public void DeleteCurrentEntity()
+        {
+            if (selectedEntity != null)
+            {
+                mapSystem.assignmentEntityDictionary.Remove(selectedEntity.aeID);
+                Destroy(selectedEntity.gameObject);
+                selectedEntity = null;
+                currentMode.Value = EditMode.NONE;
+            }
         }
     }
 }

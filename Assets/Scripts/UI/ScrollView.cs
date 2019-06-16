@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
+using UnityEngine.UI;
 using DG.Tweening;
 
 namespace ITCT
@@ -16,9 +17,13 @@ namespace ITCT
 
 		protected float defaultHeight;
 
+		protected ScrollRect scrollRect;
+		public RectTransform content;
+
         // Use this for initialization
         void Start()
         {
+			scrollRect = GetComponent<ScrollRect>();
 			RectTransform t = GetComponent<RectTransform>();
 			defaultHeight = t.sizeDelta.y;
 			infoSystem.showDetail.AsObservable()
@@ -29,5 +34,10 @@ namespace ITCT
 						.SetEase(Ease.InOutCubic);
 				});
         }
+
+		void Update()
+		{
+			scrollRect.verticalNormalizedPosition += 100 * (Input.mouseScrollDelta.y)/content.sizeDelta.y ;
+		}
     }
 }

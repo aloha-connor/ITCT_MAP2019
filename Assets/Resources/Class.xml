@@ -1,8 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Classes>
 
-    <Class id = "0">테스트 클래스</Class>
-    <Class id = "1">테스트 클래스2</Class>
-    <Class id = "2">테스트 클래스3</Class>
+    <Class id = "0">과제전</Class>
+    <Class id = "1">HCI 이론 및 실습</Class>
+    <Class id = "2">게임의 이해</Class>
+    <Class id = "3">디지털영상실습1</Class>
+    <Class id = "4">디지털음향의 이해</Class>
+    <Class id = "5">문화컨텐츠의 이해</Class>
+    <Class id = "6">비주얼라이제이션</Class>
+    <Class id = "7">사용자중심디자인</Class>
+    <Class id = "8">웹프로그래밍개론</Class>
+    <Class id = "9">인터랙티브미디어</Class>
+    <Class id = "10">정보문화기술입문</Class>
+    <Class id = "11">창의연구실습</Class>
+    <Class id = "12">미래뉴스실습 I</Class>
 
 </Classes>

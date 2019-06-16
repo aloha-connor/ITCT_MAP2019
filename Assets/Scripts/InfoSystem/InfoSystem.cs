@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UniRx;
+using UniRx.Triggers;
 using UnityEngine.UI;
 
 namespace ITCT
@@ -11,6 +12,7 @@ namespace ITCT
     {
         public AssignmentSystem assignmentSystem;
         public ClassSystem classSystem;
+        public MapSystem mapSystem;
 
         public Subject<ICollection<int>> SubjectQueriedAssignmentsChanged { get; protected set; }
 
@@ -48,6 +50,15 @@ namespace ITCT
 					if(!byName) UpdateQueried(QueryDefault(tagSelector.tagMask.Value));
 					else Search();
 				});
+
+            searchInputField.onEndEdit
+                .AddListener((s) => Search());
+
+            mapSystem.SubjectAssignmentEntityRendererSelected.AsObservable()
+                .Subscribe(ent => {
+                    AssignmentEntity entity = mapSystem.assignmentEntityDictionary[ent.aeID];
+                    UpdateQueried(QueryByList(entity.assignmentIDList));
+                });
         }
 
 		public void ListAll()
@@ -95,6 +106,16 @@ namespace ITCT
             return ListQueried(queriedByName);
         }
 
+        protected ICollection<int> QueryByList(List<int> list)
+        {
+            List<Assignment> queriedByList =
+                                assignmentSystem.assignmentList
+                                    .Where(a => list.Contains(a.id))
+                                    .ToList();
+
+            return ListQueried(queriedByList);
+        }
+
         protected ICollection<int> ListQueried(ICollection<Assignment> queried)
         {
             IEnumerator<Assignment> orderedQueried
@@ -119,12 +140,6 @@ namespace ITCT
             if(!currentSelectedQueried) InfoCardSelected(-1);
 
             return result;
-        }
-
-        [ContextMenu("toggle detail")]
-        public void ToggleDetail()
-        {
-            showDetail.Value = !showDetail.Value;
         }
     }
 }

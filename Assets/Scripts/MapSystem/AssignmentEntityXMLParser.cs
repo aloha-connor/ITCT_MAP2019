@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
+using System.IO;
 using UnityEngine;
 
 namespace ITCT
@@ -23,12 +24,12 @@ namespace ITCT
 
     public class AssignmentEntityXMLParser
     {
-        public List<AssignmentEntity> ParseXML(TextAsset textAsset)
+        public List<AssignmentEntity> ParseXML(string text)
         {
             List<AssignmentEntity> result = new List<AssignmentEntity>();
 
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.LoadXml(textAsset.text);
+            xmlDoc.LoadXml(text);
 
             XmlNode root = xmlDoc.SelectSingleNode("AssignmentEntities");
             XmlNodeList assignmentEntities = root.SelectNodes("AssignmentEntity");
@@ -49,6 +50,51 @@ namespace ITCT
                 result.Add(newAE);
             }
             return result;
+        }
+
+        public void SaveAsXML(Dictionary<int, AssignmentEntity> entityDic)
+        {
+            string path = Application.streamingAssetsPath + "/AssignmentEntity.xml";
+            //FileStream file = File.OpenWrite(path);
+            string writeData = "";
+            writeData += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+            writeData += "<AssignmentEntities>\n";
+            foreach(KeyValuePair<int,AssignmentEntity> pair in entityDic)
+            {
+                writeData += "\n";
+                writeData += "<AssignmentEntity id = \"" 
+                    + pair.Value.aeID 
+                    + "\" type = \"" 
+                    + (pair.Value.aeType == AEType.computer ? "computer" : "wall")
+                    + "\">\n";
+
+                writeData += "<floor>" + pair.Value.floor + "</floor>\n" ;
+                writeData += "<shape>\n" ;
+                    writeData += "<point x = \""
+                        + pair.Value.pos.x
+                        + "\" y = \""
+                        + pair.Value.pos.y
+                        + "\" />\n" ;
+                    writeData += "<radius r = \""
+                        + pair.Value.radius
+                        + "\" />\n" ;
+                    writeData += "<theta t = \""
+                        + pair.Value.theta
+                        + "\" />\n" ;
+                writeData += "</shape>\n";
+                writeData += "<assignments>\n" ;
+                    foreach(int id in pair.Value.assignmentIDList)
+                    {
+                        writeData += "<assignment id = \""
+                            + id
+                            + "\" />\n" ;
+                    }
+                writeData += "</assignments>\n" ;
+                writeData += "</AssignmentEntity>\n";
+            }
+            writeData += "\n";
+            writeData += "</AssignmentEntities>\n";
+            File.WriteAllText(path, writeData);
         }
     }
 }

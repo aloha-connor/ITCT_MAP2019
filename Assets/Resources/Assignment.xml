@@ -1,64 +1,1671 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Assignments>
 
     <Assignment id = "0">
-        <floor>3</floor>
-        <room>302</room>
+        <floor>1</floor>
+        <room>info</room>
         <entityID>0</entityID>
         <classID>0</classID>
-        <title>테스트용 과제</title>
-        <comment>테스트로 만들어보았다</comment>
-        <conceptComment>소오오오오름</conceptComment>
+        <title>Interactive Map for 과제전</title>
+        <comment>내 친구의 과제는 어디에 있을까?\n게임을 만들어 전시한다는데, 게임들은 어디에 있을까?\n이 수업은 어디에 전시되어있지?\n\nInteractive Map for 과제전이면 한 방에 해결!\n 6월 20일 발매!</comment>
+        <conceptComment>이것은 과제가 아니다.</conceptComment>
         <teammates>
             <person>강건우</person>
-            <person>강건우의 컴공 자아</person>
-            <person>강건우의 정문 자아</person>
+            <person>장한솔</person>
         </teammates>
-        <tag>game</tag>
+        <tag>prototype</tag>
     </Assignment>
 
     <Assignment id = "1">
         <floor>2</floor>
-        <room>202</room>
+        <room>island</room>
         <entityID>0</entityID>
         <classID>1</classID>
-        <title>테스트용 과제2</title>
-        <comment>테스트2로 만들어보았다</comment>
-        <conceptComment>소오오오오름</conceptComment>
+        <title>MOBA</title>
+        <comment>종강도 했는데 영화나 볼까? 실시간 통합영화시간표 챗봇 모바가 가까운 곳에서 원하는 시간에 끌리는 영화를 보고 싶은 그대를 도와드립니다!</comment>
+        <conceptComment>과제하느라 정작 내가 영화를 못보러 갔다^0^ 모바? 뭘봐... 못봐!</conceptComment>
         <teammates>
-            <person>강건우</person>
-            <person>강건우의 자전 자아</person>
+            <person>강수진</person>
+            <person>구보림</person>
+            <person>김수민</person>
+            <person>임지원</person>
         </teammates>
         <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
     </Assignment>
-    
+
     <Assignment id = "2">
         <floor>2</floor>
-        <room>202</room>
-        <entityID>0</entityID>
-        <classID>2</classID>
-        <title>테스트용 과제3</title>
-        <comment>테스트3로 만들어보았다</comment>
-        <conceptComment>소오오오오름</conceptComment>
+        <room>island</room>
+        <entityID>1</entityID>
+        <classID>1</classID>
+        <title>셔벗</title>
+        <comment>서울대학교 셔틀버스의 실시간 도착 정보, 노선과 운행 시간, 정류장 위치 등을 알려 주는 챗봇</comment>
+        <conceptComment>조원 4명이 도합 18년째 학교를 다니고 있지만 교내 셔틀을 제대로 타 본 사람이 없다.</conceptComment>
         <teammates>
-            <person>강건우가 아닌 것</person>
+            <person>강민구</person>
+            <person>서지희</person>
+            <person>양경인</person>
+            <person>최해련</person>
         </teammates>
         <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
     </Assignment>
 
     <Assignment id = "3">
         <floor>2</floor>
-        <room>202</room>
-        <entityID>0</entityID>
-        <classID>2</classID>
-        <title>테스트용 과제3</title>
-        <comment>테스트3로 만들어보았다</comment>
-        <conceptComment>소오오오오름</conceptComment>
+        <room>island</room>
+        <entityID>2</entityID>
+        <classID>1</classID>
+        <title>쫑알이: 서울대 학사일정 알리미</title>
+        <comment>카톡! 드랍 일이 며칠 안남았습니다! 서두르세요~\n서울대학교 학사 일정 관련해서 응답 및 알림을 주는 챗봇이다. 귀여운 짤들과 편안한 말투로 서비스을 이용해 볼 수 있다.</comment>
+        <conceptComment>챗봇 개발에...개발자가 없다....</conceptComment>
         <teammates>
-            <person>강건우가 아닌 것</person>
+            <person>왕정민</person>
+            <person>박보영</person>
+            <person>송예진</person>
+            <person>한지인</person>
         </teammates>
         <tag>poster</tag>
         <tag>prototype</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "4">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>3</entityID>
+        <classID>1</classID>
+        <title>일정알림봇</title>
+        <comment>자꾸 사소한 할 일을 까먹는다면? 일정알림봇만 믿으세요! 세제 사기, 프린트 하기, 린스 사기 등등! 사소한 일정들을 일정알림봇이 대신 기억해서 제때 알려드릴게요!</comment>
+        <conceptComment>우리도...개발자가...없다....</conceptComment>
+        <teammates>
+            <person>김강미</person>
+            <person>김수림</person>
+            <person>백승호</person>
+            <person>신예은</person>
+            <person>이하연</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "5">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>4</entityID>
+        <classID>1</classID>
+        <title>서울대 탐색기</title>
+        <comment>서울대 내부에 당신들이 찾기 힘들었던 시설을 찾아드립니다! 인쇄소, 카페, 식당 등을 찾아보세요~</comment>
+        <conceptComment>처음 계획은 카페, 식당도 포함되었지만 놀랍게도 인쇄소 밖에 찾을 수 없다.</conceptComment>
+        <teammates>
+            <person>김경석</person>
+            <person>김민정</person>
+            <person>정재현</person>
+            <person>서용삼</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "6">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>5</entityID>
+        <classID>1</classID>
+        <title>느나얌얌</title>
+        <comment>서울대학교 교내 카페 느티나무 메뉴 추천, 신메뉴 알림, 협동조합 등록 방법 등 다양한 서비스를 제공하는 챗봇</comment>
+        <conceptComment>느티나무의 모든 메뉴를 먹어봐야 할지도 모른다는 사실이 소름돋았다</conceptComment>
+        <teammates>
+            <person>김선영</person>
+            <person>신동준</person>
+            <person>윤아람</person>
+            <person>전유정</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "7">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>6</entityID>
+        <classID>1</classID>
+        <title>스누책봇</title>
+        <comment>몇가지 검색어와 터치만으로 중앙도서관 소장 도서를 확인할 수 있는 챗봇</comment>
+        <conceptComment>평균 6학년인 사람들이 팀플을 하니 회의가 모두 2시간 컷!</conceptComment>
+        <teammates>
+            <person>노양현</person>
+            <person>송지현</person>
+            <person>신윤주</person>
+            <person>정영록</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "8">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>7</entityID>
+        <classID>1</classID>
+        <title>정보문화학 졸업 사정 안내봇</title>
+        <comment>정보문화학 졸업 사정을 어디서나 간편하게 할 수 있도록 도와주는 챗봇</comment>
+        <conceptComment>만들수록 졸업에서 멀어져감을 느낄 수 있다</conceptComment>
+        <teammates>
+            <person>김아영</person>
+            <person>전혁주</person>
+            <person>유은이</person>
+            <person>박소형</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "9">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>8</entityID>
+        <classID>1</classID>
+        <title>종강봇</title>
+        <comment>당신의 힘든 한 학기를 화이팅하게 보낼 수 있게 도와주는 우리 친구 종강이!! 밤샘 과제와 시험공부를 스무스하게 만들어줄 컨텐츠 추천부터 적절한 조언과 위로까지! 학기 중 언제든 종강이를 찾아주세요~</comment>
+        <conceptComment>"잘 모르겠어.. 다시 한번 말해줄래?"\n6월 초까지... 종강이는 '종강'이 무엇인지 이해하지 못했다...</conceptComment>
+        <teammates>
+            <person>박서라</person>
+            <person>정수빈</person>
+            <person>홍민정</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "10">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>9</entityID>
+        <classID>1</classID>
+        <title>샤냥이: 서울대 공간/행사 정보</title>
+        <comment>팀플할 때 어디 가지? 쉴 만 한데 어디 없을까? 심심한데 뭐 재미있는거 안하나? 서울대학교의 공간과 행사에 관한 모든 것에 통달한 샤냥이에게 물어보세요!</comment>
+        <conceptComment>결국 고학번들은 친구를 찾을 수 없어서 샤냥이를 찾게 되고...</conceptComment>
+        <teammates>
+            <person>노하경</person>
+            <person>유채라</person>
+            <person>이유나</person>
+            <person>함호준</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "11">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>10</entityID>
+        <classID>1</classID>
+        <title>박보건: 박 터지는 보건소를 편리하게 이용해보자</title>
+        <comment>서울대학교 보건소 이용 도우미 박보건! 훈훈하고 귀여운 누군가가 생각나는 그 이름! 현실 친구같은 친근함이 있는 보건소 챗봇 박보건을 지금 당장 만나보세요~!</comment>
+        <conceptComment>챗봇은 없고 박보검만 남았다... (우리도 개발자가 없다...)</conceptComment>
+        <teammates>
+            <person>김해린</person>
+            <person>송태헌</person>
+            <person>신재현</person>
+            <person>황세연</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "12">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>11</entityID>
+        <classID>1</classID>
+        <title>스누써클 : 교내 동아리, 공연 챗봇</title>
+        <comment>서울대학교 학생을 위한 동아리 가입 정보, 공연 정보 및 공연 홍보용 챗봇! 원하는 동아리를 분야별, 과별로 검색도 가능하고, 오늘 무슨 공연을 하는 지도 알 수 있습니다:)</comment>
+        <conceptComment>우리학교에 동아리가 정말정말 많다..</conceptComment>
+        <teammates>
+            <person>구민주</person>
+            <person>김세원</person>
+            <person>박석현</person>
+            <person>이사은</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
+    </Assignment>
+    
+    <Assignment id = "13">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>0</entityID>
+        <classID>2</classID>
+        <title>Lightkeeper</title>
+        <comment>등대가 빛을 발하던 아름답고 평화로운 섬마을,\n어느 날 태풍이 불어 등대의 불이 모두 꺼지는데…\n등대에 올라 다시 섬의 빛을 밝혀라!</comment>
+        <conceptComment>야심한 밤 우리 집의 빛만 밝혔다…</conceptComment>
+        <teammates>
+            <person>박석현</person>
+            <person>서희원</person>
+            <person>안재현</person>
+            <person>오윤선</person>
+        </teammates>
+        <tag>game</tag>
+        <tag>poster</tag>
+    </Assignment>
+
+    <Assignment id = "14">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>1</entityID>
+        <classID>2</classID>
+        <title>돼지, 우리</title>
+        <comment>당신의 로망도 잘 먹고 잘 자는 행복한 돼지인가요?\n하지만 현실은 시궁창.. 그렇게 호락호락하지 않아요!\n본격 돼지 생존 시뮬레이션 게임!\n[돼지, 우리]가 여러분의 선택을 기다립니다!</comment>
+        <conceptComment>우리의 공식 빠이빠이 인사는 "수고하셨고, 수고하세요"였다...</conceptComment>
+        <teammates>
+            <person>김지현</person>
+            <person>나상현</person>
+            <person>명소연</person>
+            <person>홍민정</person>
+            <person>홍성민</person>
+        </teammates>
+        <tag>game</tag>
+        <tag>poster</tag>
+    </Assignment>
+
+    <Assignment id = "15">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>2</entityID>
+        <classID>2</classID>
+        <title>날아라 코코!</title>
+        <comment>새가 되어 하늘을 날고 싶은 다람쥐 코코. 마법사를 찾아가 소원을 빌기로 하고 활강할 수 있는 망토를 만들어 모험을 떠나는데... 갑자기 뒤에서 코코를 쫓아오는 몬스터! 과연 코코는 무사히 마법사의 성에 도착해 소원을 빌 수 있을까요?</comment>
+        <conceptComment>개발자 : 초기에 제가 예상했던 그림과 크게 다르지 않은 결과물이 나왔다는 게 가장 놀랍습니다.</conceptComment>
+        <teammates>
+            <person>배수경</person>
+            <person>이승민</person>
+            <person>임혜린</person>
+            <person>정상현</person>
+        </teammates>
+        <tag>game</tag>
+        <tag>poster</tag>
+    </Assignment>
+
+    <Assignment id = "16">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>3</entityID>
+        <classID>2</classID>
+        <title>짜요짜요</title>
+        <comment>한 소년이 있었습니다. 그의 꿈은 우주여행이었지만 너무도 가난하여 국내여행도 불가능했습니다.\n그러나 소년은 좌절하지 않았습니다. 그의 손에는 다 쓴 케찹병이 쥐어져 있었습니다.\n여러분. 소년을 우주로 보내주세요!</comment>
+        <conceptComment>과제전 3주 전에 기획이 바뀐 팀이 있다?!</conceptComment>
+        <teammates>
+            <person>김태희</person>
+            <person>박경록</person>
+            <person>장한솔</person>
+        </teammates>
+        <tag>game</tag>
+        <tag>poster</tag>
+    </Assignment>
+
+    <Assignment id = "17">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>4</entityID>
+        <classID>2</classID>
+        <title>Last Ark</title>
+        <comment>"하늘의 창들이 열려 사십 주야를 비가 땅에 쏟아졌더라..."\n\n육지가 물에 잠긴 이 세상. 우리는 유일하게 남은 육지인 에베레스트 산을 향해 모험을 떠납니다.\n뗏목 위에서 우리는 서로를 의지하며... 생존할 수 있을까요?</comment>
+        <conceptComment>0.01%의 확률로 5번 연속 주사위 1을 굴린 개발자가 있었다.</conceptComment>
+        <teammates>
+            <person>김혜인</person>
+            <person>이강현</person>
+            <person>이재웅</person>
+            <person>이진우</person>
+            <person>장한솔</person>
+        </teammates>
+        <tag>game</tag>
+        <tag>poster</tag>
+    </Assignment>
+
+    <Assignment id = "18">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>0</entityID>
+        <classID>3</classID>
+        <title>국민프로듀서 동현씨의 하루</title>
+        <comment>[VLOG/동현씨] 하루를 모두 덕질에 쏟아 붓는 동현씨의 일상을 따라가보자</comment>
+        <conceptComment>동현씨의 덕심은 과연 연기일까?</conceptComment>
+        <teammates>
+            <person>강동현</person>
+            <person>권지현</person>
+            <person>서돈향</person>
+            <person>이하연</person>
+            <person>임혜빈</person>
+            <person>최성운</person>
+            <person>홍지월</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "19">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>1</entityID>
+        <classID>3</classID>
+        <title>로꾸꺼</title>
+        <comment>소심한 성격 탓에 매번 호구잡히며 살던 주호는 이를 해결할 뜻밖의 능력을 얻게되는데...!</comment>
+        <conceptComment>대망의 마지막씬 촬영 중 쿵 소리가 났고 뒤돌아봤을 때 이미 DSLR은 ㅂ..바닥에..(그때의 정적 잊을 수 없다)</conceptComment>
+        <teammates>
+            <person>김재희</person>
+            <person>박석현</person>
+            <person>박재웅</person>
+            <person>백지수</person>
+            <person>오혜정</person>
+            <person>유창원</person>
+            <person>전유정</person>
+            <person>홍지민</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "20">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>2</entityID>
+        <classID>3</classID>
+        <title>Sleep Hygiene</title>
+        <comment>밤만 되면 곤두서는 신경. 재인은 오늘도 밤잠을 설친다. 도통 잠을 잘 수 없는 그녀는 재현과의 동침을 결심한다.</comment>
+        <conceptComment>마지막 영상을 찍을 때 아이폰 배터리는 2퍼센트였다..</conceptComment>
+        <teammates>
+            <person>강민구</person>
+            <person>김민정</person>
+            <person>김지한</person>
+            <person>김해윤</person>
+            <person>송민경</person>
+            <person>신하일</person>
+            <person>최상욱</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "21">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>3</entityID>
+        <classID>3</classID>
+        <title>우리 팀에 미친놈들이 있는 것 같다</title>
+        <comment>최악의 팀원들만 모아놓은 조별과제에서 재홍은 과연 좋은 성적을 받을 수 있을까!?! 2019년 최고의 팀플 드라마!</comment>
+        <conceptComment>우리 디영실 팀은 안 그렇겠지..?</conceptComment>
+        <teammates>
+            <person>고이경</person>
+            <person>김아영</person>
+            <person>김재홍</person>
+            <person>김지수</person>
+            <person>박유진</person>
+            <person>박태현</person>
+            <person>박현</person>
+            <person>윤창현</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "22">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>4</entityID>
+        <classID>3</classID>
+        <title>디지털 퇴마식</title>
+        <comment>"코드에 마가 꼈네."\n\n늦은 밤 랩실, 과제를 하던 희수는 원인 불명의 버그에 절망한다. 이에 지현은 디지털 퇴마식을 제안하는데···.</comment>
+        <conceptComment>심야 씬을 찍다가 아침 해가 떠버렸다.</conceptComment>
+        <teammates>
+            <person>고병욱</person>
+            <person>김성준</person>
+            <person>김진영</person>
+            <person>양경인</person>
+            <person>장해중</person>
+            <person>한지인</person>
+            <person>함호준</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "23">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>5</entityID>
+        <classID>3</classID>
+        <title>The Book</title>
+        <comment>홀로 남은 강의실... 무언가 나에게 다가온다..! 숨막히는 공포와 서스펜스..! 캠퍼스 심리 호러 The Book</comment>
+        <conceptComment>과제전 컨셉이 잡히기 전에 공포물 주제를 정했다. 들인 시간에 비해 고퀄이다. 마지막으로 사실은 (엔딩스포) 영상이다.</conceptComment>
+        <teammates>
+            <person>김경석</person>
+            <person>나상현</person>
+            <person>노준현</person>
+            <person>박상원</person>
+            <person>이진석</person>
+            <person>정재현</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "24">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>6</entityID>
+        <classID>3</classID>
+        <title>그림 속 그 남자</title>
+        <comment>꿈속에서 수줍게 다가온 그 남자. 자꾸 생각나는 그 얼굴을 그림에 담으며 펼쳐지는 미스터리개그로맨스(?)물</comment>
+        <conceptComment>저녁씬을 찍어야 되는데 아무리 기다려도 해가 안 졌다. 그래서 갑자기 다 같이 배구를 했다. 손목에 멍 듦.</conceptComment>
+        <teammates>
+            <person>김다현</person>
+            <person>김예진</person>
+            <person>윤아람</person>
+            <person>전상은</person>
+            <person>정세용</person>
+            <person>연식</person>
+            <person>한아름</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "25">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>0</entityID>
+        <classID>4</classID>
+        <title>판다 먹방</title>
+        <comment>판다가 대나무를 씹어먹는 소리를 들어보세요!</comment>
+        <conceptComment>판다가 대나무 먹는거랑 사람이 소파에 누워서 팝콘 먹는거랑 자세가 똑같음...</conceptComment>
+        <teammates>
+            <person>김수림</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "26">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>1</entityID>
+        <classID>4</classID>
+        <title>커피 드립</title>
+        <comment>녹두 카페에서 아이스 아메리카노를 주문하면 무슨 소리가 들릴까요?!</comment>
+        <conceptComment>기말기간의 대학생에게 3대 영양소는 카페인, 니코틴, 알콜...</conceptComment>
+        <teammates>
+            <person>박수민</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "27">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>2</entityID>
+        <classID>4</classID>
+        <title>한강 새들의 대화</title>
+        <comment>한강에 사는 새들의 대화에 귀 기울여 봅시다!</comment>
+        <conceptComment>대화가 맞긴 할까요..?</conceptComment>
+        <teammates>
+            <person>박민주</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "28">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>3</entityID>
+        <classID>4</classID>
+        <title>댄스 스튜디오</title>
+        <comment>This is KRUMP culture</comment>
+        <conceptComment>단순히 소리만 지르는 것 같겠지만, 그게 문화입니다.</conceptComment>
+        <teammates>
+            <person>정재현</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "29">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>4</entityID>
+        <classID>4</classID>
+        <title>연트럴파크</title>
+        <comment>새소리와 차소리가 공존하는 연트럴파크의 목소리를 들어보아요</comment>
+        <conceptComment>사실 비슷한 소리를 관악산(=학교)에서도 들을 수 있습니다...</conceptComment>
+        <teammates>
+            <person>허정우</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "30">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>5</entityID>
+        <classID>4</classID>
+        <title>은평구 춘계 금성당제</title>
+        <comment>은평구 샤머니즘 박물관 마당에서의 흥겨운 굿 소리!!</comment>
+        <conceptComment>앗 여기 은평구 주민이 아닌데 낄껴한 사람이 있다?!</conceptComment>
+        <teammates>
+            <person>김민정</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "31">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>6</entityID>
+        <classID>4</classID>
+        <title>DPR_Live 떼창</title>
+        <comment>패션 페스티벌에서 녹음한 관객의 떼창입니다.</comment>
+        <conceptComment>패션은 알지도 못하는데, 나오는 헤드라이너들이 좋아서 가봤더니 사람들 전부 비슷한 목적으로 온거 같아요</conceptComment>
+        <teammates>
+            <person>이동민</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "32">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>7</entityID>
+        <classID>4</classID>
+        <title>선유도공원</title>
+        <comment>공원의 물소리, 아이들의 목소리, 양화대교의 차 소리... 도심 공원의 소리가 들려요!</comment>
+        <conceptComment>선유도공원에 세 번 가 봤는데 모두 수업이나 과제 때문이었다...</conceptComment>
+        <teammates>
+            <person>서지희</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "33">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>8</entityID>
+        <classID>4</classID>
+        <title>일원동 성당</title>
+        <comment>성당의 성스러운 분위기를 만들어주는중요 요소, 소리입니다</comment>
+        <conceptComment>저는 성당에 다니지 않습니다 ^^</conceptComment>
+        <teammates>
+            <person>민세희</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "34">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>9</entityID>
+        <classID>4</classID>
+        <title>5월은 어린이날</title>
+        <comment>어린이날 행사를 구성하는 즐거운 소리를 들어보아요!</comment>
+        <conceptComment>어린이 때도 가본 적 없는 어린이날 행사를 과제때문에 가다니</conceptComment>
+        <teammates>
+            <person>방소정</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "35">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>10</entityID>
+        <classID>4</classID>
+        <title>시장의 아침</title>
+        <comment>얼음 까는 소리 어름어름</comment>
+        <conceptComment>시장의 아침은 생각보다 잔잔하다</conceptComment>
+        <teammates>
+            <person>김지현</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "36">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>11</entityID>
+        <classID>4</classID>
+        <title>수성동 물소리</title>
+        <comment>묵소리동네의 물소리를 녹음한 소리</comment>
+        <conceptComment>이 물소리를 들으면서 윤동주가 쓴 시가 별 헤는 밤입니다</conceptComment>
+        <teammates>
+            <person>김경석</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "37">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>12</entityID>
+        <classID>4</classID>
+        <title>서울대공원</title>
+        <comment>서울대공원에 있는 다양한 동물들 중 울음소리가 특이한 두루미와 물범의 소리를 녹음했습니다!</comment>
+        <conceptComment>두루미 소리 후반부에 들리는 보다 작은 소리는 고니다!</conceptComment>
+        <teammates>
+            <person>허윤경</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "38">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>13</entityID>
+        <classID>4</classID>
+        <title>관악산 등산로</title>
+        <comment>아무도 없는 관악산 등산로의 소리를 녹음해보자</comment>
+        <conceptComment>관악산 등산에 3시간이 걸린 점</conceptComment>
+        <teammates>
+            <person>조세원</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "39">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>14</entityID>
+        <classID>4</classID>
+        <title>경의선 숲길의 나른한 오후 (feat.반려견)</title>
+        <comment>좋아하는 시간대에 좋아하는 공간에서 반려견과 함께한 순간을 담아보았습니다.</comment>
+        <conceptComment>반려견 발소리보다 지나가는 아이의 존재감이 더 크다는 점..</conceptComment>
+        <teammates>
+            <person>이진석</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "40">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>15</entityID>
+        <classID>4</classID>
+        <title>알라딘 중고서점</title>
+        <comment>잔잔한 bgm 사이 들리는 서점의 편안한 소리를 들어봅시다!</comment>
+        <conceptComment>책 넘기는 소리 말고 사람 발걸음 소리만 잔뜩 들린다는 점...</conceptComment>
+        <teammates>
+            <person>김지원</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "41">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>16</entityID>
+        <classID>4</classID>
+        <title>이마트 식품매장</title>
+        <comment>한가로운 평일 낮에도 활기찬 마트 소리, 그리고 중독성 넘치는 이마트의 새 로고송을 감상해보세요.</comment>
+        <conceptComment>한 달이 지났는데 아직도 집에 혼자 있을 떄 이마트 노래를 부른다는 점</conceptComment>
+        <teammates>
+            <person>양경인</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "42">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>17</entityID>
+        <classID>4</classID>
+        <title>결혼식</title>
+        <comment>결혼식의 순간을 느껴보세요</comment>
+        <conceptComment>축가를 소름돋게 잘부르심</conceptComment>
+        <teammates>
+            <person>나상현</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "43">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>18</entityID>
+        <classID>4</classID>
+        <title>낙성대 놀이터의 아이들</title>
+        <comment>평일 오후 아이들의 웃음소리, 평화로운 분위기를 느껴보세요</comment>
+        <conceptComment>애기들 체력도 참 좋다..</conceptComment>
+        <teammates>
+            <person>박태경</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "44">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>19</entityID>
+        <classID>4</classID>
+        <title>강원도 해수욕장</title>
+        <comment>강원도 봉포 해수욕장에서 들리는 다양한 소리를 찾아보세요!</comment>
+        <conceptComment>바람 소리의 방해가 이렇게 힘들 줄이야</conceptComment>
+        <teammates>
+            <person>강민구</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "45">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>20</entityID>
+        <classID>4</classID>
+        <title>지하철 탁구장 소리</title>
+        <comment>지하철 안에 있는 탁구장에서 나는 탁구공 소리의 리듬을 느껴보세요!</comment>
+        <conceptComment>운동 싫어합니다.</conceptComment>
+        <teammates>
+            <person>권혁범</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "46">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>21</entityID>
+        <classID>4</classID>
+        <title>강아지 코 고는 소리</title>
+        <comment>강아지가 코 고는 소리입니다.</comment>
+        <conceptComment>코 고는 게 이렇게 귀여울 일인가?</conceptComment>
+        <teammates>
+            <person>이수연</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "47">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>22</entityID>
+        <classID>4</classID>
+        <title>미-팅의 소리</title>
+        <comment>대학생활의 상징! 한창 고조된 미팅의 분위기를 느껴보세요</comment>
+        <conceptComment>예상보다 너무 열심히 응해주시는 상대분들...</conceptComment>
+        <teammates>
+            <person>김민지</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "48">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>23</entityID>
+        <classID>4</classID>
+        <title>제주도의 바람</title>
+        <comment>제주도 민박집 침대 머리맡에서 들려오는 바람 소리입니다.</comment>
+        <conceptComment>이제 3년동안 여행 못간다...</conceptComment>
+        <teammates>
+            <person>원은재</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "49">
+        <floor>2</floor>
+        <room>island</room>
+        <entityID>24</entityID>
+        <classID>4</classID>
+        <title>평일의 연남동</title>
+        <comment>이 소리는 평일 저녁 북적이기 시작하는 연남동의 소리입니다.</comment>
+        <conceptComment>버스킹을 따고 싶었지만 버스킹을 아무도 하지 않았다..</conceptComment>
+        <teammates>
+            <person>백지수</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "50">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>0</entityID>
+        <classID>5</classID>
+        <title>뮤즈 컴퍼니</title>
+        <comment>멀고 먼 어느 우주, 뮤즈들의 회사에서 벌어지는 이야기. 사람들에게 예술적 영감을 주고 작품을 탄생시키며 '뮤즈 컴퍼니'는 오늘도 바쁘게 돌아가고 있다. 그러던 어느날, 회장 '시'에게 사장 '소설'이 찾아오는데...</comment>
+        <conceptComment>레고가...</conceptComment>
+        <teammates>
+            <person>김경석</person>
+            <person>김민정</person>
+            <person>임혜린</person>
+            <person>허정우</person>
+            <person>황지연</person>
+        </teammates>
+        <tag>install</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "51">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>1</entityID>
+        <classID>5</classID>
+        <title>옥탑방 친구들</title>
+        <comment>넘쳐나는 갬성 브이로그에 신물이 난 옥탑방 친구들, 우리들의 '진짜' 일상을 담다.\n일어나서 유튭, 낮잠자고 유튭, 해지면 유튭 보는 브이로그!\n유튜버로 변신한 옥탑방 친구들을 어여삐 여겨주소서</comment>
+        <conceptComment>누구나 마음속에 유튜버의 꿈.. 한 번 쯤은 품고 있잖아요..?</conceptComment>
+        <teammates>
+            <person>구민주</person>
+            <person>나상현</person>
+            <person>박은영</person>
+            <person>이승우</person>
+            <person>이영호</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "52">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>2</entityID>
+        <classID>5</classID>
+        <title>자하연 오리, 그들이 알고싶다</title>
+        <comment>햇살 좋은 공강시간에 자하연 오리에 몰린 인간무리를 볼 수 있다. 대체 왜 이리도 열광하는 것인가. Ph.D OH, 수의예과생, @snuduck, 문화관 관리자, 동물생태학자를 통해 오리 덕후부터 안티까지 그 궁금증을 파헤친다!</comment>
+        <conceptComment>동물생태학자는 사실 한 팀원의 동아리 친구이다. 그리고 동물생태학자의 목소리는 또다른 팀원의 과 후배이다.</conceptComment>
+        <teammates>
+            <person>배규태</person>
+            <person>고병욱</person>
+            <person>김효림</person>
+            <person>오서림</person>
+            <person>허윤경</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "53">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>3</entityID>
+        <classID>5</classID>
+        <title>OSMU</title>
+        <comment>당신은 지금까지 이것과 비슷한 영상조차 단.한.번.도. 본 적이 없다. 올 여름, 당신의 오감을 하늘 저 멀리 날려버릴 단 하나의 힐링어드벤처로맨틱액션스릴러-</comment>
+        <conceptComment>지갑을 잃어버리는 설정으로 촬영한 팀원 최씨는 다음날 실제로 지갑을 잃어버렸고 (구)남자친구까지 잃었다고 함.</conceptComment>
+        <teammates>
+            <person>강건우</person>
+            <person>오혜정</person>
+            <person>이수민</person>
+            <person>최성운</person>
+            <person>최희정</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "54">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>4</entityID>
+        <classID>5</classID>
+        <title>나는 오리다</title>
+        <comment>서울대 자하연의 오리대스타, 쀽쀽이와 뺙뺙이. 한없이 평화로워 보이는 그들의 삶은 부러움의 대상이 아닐 수 없다. 그러나 오리로 사는 것이 과연 쉽기만 할까. 이를 탐구하기 위하여 제작진은 직접 오리가 되어 보기로 했다.</comment>
+        <conceptComment>촬영하러 갔는데 오리들이 연못에서 올라오지 않아서 총 3시간 정도 기다림</conceptComment>
+        <teammates>
+            <person>김아영</person>
+            <person>김진영</person>
+            <person>김택민</person>
+            <person>양수현</person>
+            <person>장해중</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "55">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>5</entityID>
+        <classID>5</classID>
+        <title>샤바이벌</title>
+        <comment>자칭 고학번과 명실상부 고학번의 서울대 꿀팁 토크. 관악에 몇 년 살았다면 공감하지 않을 수 없을 것이다</comment>
+        <conceptComment>요새는 17학번도 고학번이라고 주장함</conceptComment>
+        <teammates>
+            <person>류의정</person>
+            <person>박수민</person>
+            <person>박태현</person>
+            <person>정수빈</person>
+            <person>차성호</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "56">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>6</entityID>
+        <classID>5</classID>
+        <title>아몽(夢)드</title>
+        <comment>"아몬드의 일장춘몽을 통한 우리들의 청춘 이야기" \n우리는 끝없이 나아지기를 요구받는다. 남을 기준으로 스스로를 깎아내리게 된 이들에게 함께 '웃퍼할' 영상을 선물하고자 한다. </comment>
+        <conceptComment>다 같은 아몬드가 아님. 수많은 아몬드 배우가 사망함...</conceptComment>
+        <teammates>
+            <person>박민주</person>
+            <person>박혜준</person>
+            <person>서지희</person>
+            <person>신윤주</person>
+            <person>최상욱</person>
+        </teammates>
+        <tag>install</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "57">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>7</entityID>
+        <classID>5</classID>
+        <title>소확행 아바타</title>
+        <comment>힘든 일상 속에서도 사람들은 행복을 찾는다. 우리도 행복을 위해 다른 이들의 소박하지만 확실한 행복을 따라해봤다. 하지만 행복해지려 했던 하루는 점점 미궁에 빠지고 마는데...</comment>
+        <conceptComment>행복하고 싶지만 행복할 수 업서...</conceptComment>
+        <teammates>
+            <person>강수진</person>
+            <person>강형민</person>
+            <person>박지현</person>
+            <person>송지현</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "58">
+        <floor>2</floor>
+        <room>aisle</room>
+        <entityID>0</entityID>
+        <classID>6</classID>
+        <title>Data 샤방"샤"방</title>
+        <comment>자취방 계약 기간이 끝나가시나요? 다음엔 더 좋은 방으로 잘 계약하고 싶으시다고요? 걱정하지 마세요! 서울대 인근의 자취방 Data를 모아 모아 Visualizing했습니다. 샤방샤방한 "샤"방들을 골라가세요!</comment>
+        <conceptComment>데이터 시각화를 위한 데이터 정제에만 3달이 걸렸다...</conceptComment>
+        <teammates>
+            <person>고은지</person>
+            <person>금진섭</person>
+            <person>김미란</person>
+            <person>김정운</person>
+            <person>박혜준</person>
+        </teammates>
+        <tag>poster</tag>
+    </Assignment>
+
+    <Assignment id = "59">
+        <floor>2</floor>
+        <room>aisle</room>
+        <entityID>1</entityID>
+        <classID>6</classID>
+        <title>지하철은 과연 누구의 '발'일까?</title>
+        <comment>시민의 발, 지하철! 하지만 과연 지하철은 '필요한 곳'에 분포해 있을까요?\n지어 놓고 잘 쓰지 않는 역은 없을까요? 한 번 알아봅시다!</comment>
+        <conceptComment>Just the Two of Us...</conceptComment>
+        <teammates>
+            <person>김강미</person>
+            <person>김수림</person>
+        </teammates>
+        <tag>poster</tag>
+    </Assignment>
+
+    <Assignment id = "60">
+        <floor>2</floor>
+        <room>aisle</room>
+        <entityID>2</entityID>
+        <classID>6</classID>
+        <title>관악구청장 박씨의 일일</title>
+        <comment>"우리는 세금을 낼게 너네는 먹기만 해"\n업무추진비를 통해 알아보는 관악구청 2019 F/W 맛집 리스트</comment>
+        <conceptComment>시각화 수업인데 팀에 디자이너가 없음\n~일러 있는 사람이 4명 중 0명~</conceptComment>
+        <teammates>
+            <person>김연주</person>
+            <person>박수민</person>
+            <person>박혜정</person>
+            <person>차유림</person>
+        </teammates>
+        <tag>poster</tag>
+    </Assignment>
+
+    <Assignment id = "61">
+        <floor>2</floor>
+        <room>aisle</room>
+        <entityID>3</entityID>
+        <classID>6</classID>
+        <title>SNUDrop</title>
+        <comment>SNUDrop. 당신의 드랍각을 재드립니다.\n강의명, 수업 시간, 전공 등의 태그로 관심 강좌를 검색해보세요. 13년부터 19년까지의 실제 드랍률 데이터를 바탕으로 드랍률을 계산해드립니다. 똑같은 실수를 되풀이하지 마세요.</comment>
+        <conceptComment>6월 7일, 과제 제출 기한이 언제인지 모르고 있다.</conceptComment>
+        <teammates>
+            <person>서용삼</person>
+            <person>신안재</person>
+            <person>심유림</person>
+            <person>장해중</person>
+        </teammates>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "62">
+        <floor>2</floor>
+        <room>aisle</room>
+        <entityID>4</entityID>
+        <classID>6</classID>
+        <title>서울대생의 심리적 통학거리</title>
+        <comment>영화계에 UBD가 있다면 통학러에게는 SBD*가 있다!\n내 통학은 과연 몇 SBD일까? 통학생이 매일같이 거쳐야 하는 경로의 심리적 거리를 알아보자!\n* Simrijuk Budam Distance(심리적 부담 거리)</comment>
+        <conceptComment>서울대입구역에서 윗공대까지의 거리 = 서울대입구에서 한강까지의 거리</conceptComment>
+        <teammates>
+            <person>김해수</person>
+            <person>박다희</person>
+            <person>임채민</person>
+            <person>정영록</person>
+        </teammates>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "63">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>0</entityID>
+        <classID>7</classID>
+        <title>집사랑</title>
+        <comment>강아지, 고양이를 좋아하는 사람은 많은데 왜 유기동물을 입양하는 사람은 적을까요? 화면 속의 귀여운 친구들이 실제 유기동물이라면? 집사랑을 통해 동물 친구들을 만나고 도움의 손길을 내밀어 보세요!</comment>
+        <conceptComment>가제는 본제다.</conceptComment>
+        <teammates>
+            <person>김해수</person>
+            <person>김혜인</person>
+            <person>박혜정</person>
+            <person>석민창</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "64">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>1</entityID>
+        <classID>7</classID>
+        <title>슬로톡</title>
+        <comment>연인간 항상 아름다운 대화만 오갈 수는 없죠. 하지만 메신저 자체가 언행의 신중함을 도운다면? 슬로톡과 함께 "우리, 천천히 가요"</comment>
+        <conceptComment>슬로톡을 하지 않은 자, 그대가 곧 보낼 톡은... "자니?"</conceptComment>
+        <teammates>
+            <person>유채라</person>
+            <person>조수빈</person>
+            <person>현화림</person>
+            <person>유준희</person>
+            <person>김도준</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "65">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>2</entityID>
+        <classID>7</classID>
+        <title>너는 내 동행</title>
+        <comment>여행 취향 테스트를 통해 찾아본 나와 딱 맞는 동행은 바로... 너? 안전하고 정확한 동행 구인 서비스 "너는 내 동행"</comment>
+        <conceptComment>수업은 분명히 주 1횐데, 팀원과 매주 2번씩 만나는 것 같은 기분이 든다...착각이겠지?</conceptComment>
+        <teammates>
+            <person>신동준</person>
+            <person>윤아람</person>
+            <person>홍유진</person>
+            <person>박수빈</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "66">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>3</entityID>
+        <classID>7</classID>
+        <title>잠무샠</title>
+        <comment>밤샘->생산성 저하->밤샘의 수면 악순환, 규칙적인 수면을 위해 바로 옆에서 잔소리 해줄 AI 스피커가 있다면? 생산성의 시작, 당신의 수면 습관을 관리해줄 어노잉 버드, 잠무샠!</comment>
+        <conceptComment>그런데 우리는 지금도 밤샘 팀플</conceptComment>
+        <teammates>
+            <person>이유라</person>
+            <person>백승호</person>
+            <person>이수연</person>
+            <person>박용훈</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "67">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>4</entityID>
+        <classID>7</classID>
+        <title>스위치온</title>
+        <comment>당신의 하루를 깨워드립니다! 매일 아침을 상쾌하게 시작할 수 있다면? thug life를 살고 있는 당신, 스위치온으로 hustle life를 살아보아요.</comment>
+        <conceptComment>와! 이번 과제도 잘 끝냈어! 기뻐함과 동시에 쏟아져 내리는 다음 과제</conceptComment>
+        <teammates>
+            <person>강수진</person>
+            <person>김솔</person>
+            <person>오윤선</person>
+            <person>조민아</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "68">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>0</entityID>
+        <classID>8</classID>
+        <title>공강어디가</title>
+        <comment>이 드넓은 학교에 내가 있을 곳이 하나 없다? 공강 때 어디 갈 지를 모르겠는 당신을 위해  휴게, 수면, 공부 공간을 다 모았다! "공강어디가"</comment>
+        <conceptComment>제작자: 학교 말고 집에 가고 싶어요......</conceptComment>
+        <teammates>
+            <person>김수민</person>
+            <person>박보영</person>
+            <person>박우준</person>
+            <person>신동준</person>
+            <person>송예진</person>
+            <person>이혜민</person>
+        </teammates>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "69">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>1</entityID>
+        <classID>8</classID>
+        <title>한강PICK</title>
+        <comment>한강을 가고 싶은데, 어디를 가야할지도 모르겠고, 거기가서 무엇을 해야할지도 모르겠을 때! 묻지도 따지지도 않고 한강 PICK!</comment>
+        <conceptComment>그리고 정작 우리는 한강을 가지 못했다고 한다.. 누가 누구한테 추천..</conceptComment>
+        <teammates>
+            <person>박성민</person>
+            <person>신경연</person>
+            <person>이혜연</person>
+            <person>한민경</person>
+        </teammates>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "70">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>2</entityID>
+        <classID>8</classID>
+        <title>Cocktailor</title>
+        <comment>칵테일을 마시고 싶으신가요? 그런데, 뭘 마셔야 할 지 모르겠다고요? &lt;Cocktailor&gt;가 오직 당신만을 위한 칵테일을 추천해드립니다.\n세상에 단 하나뿐인 칵테일도 만들어 친구와 공유해보세요!</comment>
+        <conceptComment>내가 말도 안 되는 아재드립을 쳤는데 그게 최종본에...들어갔다....</conceptComment>
+        <teammates>
+            <person>강수진</person>
+            <person>김해수</person>
+            <person>박혜정</person>
+            <person>석민창</person>
+        </teammates>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "71">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>3</entityID>
+        <classID>8</classID>
+        <title>CtrlCV</title>
+        <comment>카톡을 깔지않아도, 이메일을 쓰지않아도 웹에서 직접 적은 주소만 기억하면 간단하게 텍스트를 복사해서 서로 다른 기기 간에 옮길 수 있는 온라인 클립보드 서비스입니다.</comment>
+        <conceptComment>이걸 가장 잘 써먹은건 컴공수업 과제로 밤새면서 코드 옮길 때였다</conceptComment>
+        <teammates>
+            <person>김미란</person>
+            <person>서희원</person>
+            <person>오효민</person>
+        </teammates>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "72">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>4</entityID>
+        <classID>8</classID>
+        <title>SNUDM</title>
+        <comment>이번 학기 역시 어김 없는 독강... 이제는 그만! &lt;SNUDM&gt;이 당신의 독강을 지워드립니다. 한 학기를 함께할 친구를 찾아줄게요.  백지장도 맞들면 낫다잖아요.</comment>
+        <conceptComment>강아지가 무리를 이루면..?\nDog Gang이지요 ( ˃⍨˂̥̥ ) ( ͡° ͜ʖ ͡°)</conceptComment>
+        <teammates>
+            <person>김정운</person>
+            <person>남재호</person>
+            <person>송지우</person>
+            <person>이승현</person>
+        </teammates>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "73">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>5</entityID>
+        <classID>8</classID>
+        <title>PLENT</title>
+        <comment>다양한 행사에 참여하고 싶지만 언제, 어떤 행사가 열리는지 알기 어려우셨죠? 관심있는 행사만 골라서 한눈에 모아볼 수 있는 교내 행사 검색 웹 서비스 "PLENT"입니다.</comment>
+        <conceptComment>학교 행사, ,. 가는 사람.. .?</conceptComment>
+        <teammates>
+            <person>금진섭</person>
+            <person>박나윤</person>
+            <person>조가영</person>
+        </teammates>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "74">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>6</entityID>
+        <classID>8</classID>
+        <title>버스타자</title>
+        <comment>매학기 너무 많은 팀플 속에서, 팀원들과 시간 맞추기 힘드셨죠? 회의록, 시간표, 그리고 알림 서비스로 버스타자가 여러분들의 팀플을 도와드리겠습니다.</comment>
+        <conceptComment>우리부터 버스 태워줘......ㅎ..</conceptComment>
+        <teammates>
+            <person>공채린</person>
+            <person>박성우</person>
+            <person>우지명</person>
+            <person>임지원</person>
+            <person>홍유진</person>
+        </teammates>
+        <tag>web</tag>
+    </Assignment>
+
+    <Assignment id = "75">
+        <floor>1</floor>
+        <room>center</room>
+        <entityID>0</entityID>
+        <classID>9</classID>
+        <title>비밀의 숲</title>
+        <comment>지치고 힘든 요즘. 고요한 '나만의 숲'에서 휴식을 취해보세요. \n가는 방법은 간단합니다! 눈을 살짝 감으면 숲이 나만을 위해\n들려주는 소리를 들을 수 있을거예요.</comment>
+        <conceptComment>초기 기획 : 무조건 예쁜 걸 만들자!\n최종 기획 : 시각을 포기하자!</conceptComment>
+        <teammates>
+            <person>김수림</person>
+            <person>김해수</person>
+            <person>박수민</person>
+        </teammates>
+        <tag>install</tag>
+    </Assignment>
+
+    <Assignment id = "76">
+        <floor>1</floor>
+        <room>studio</room>
+        <entityID>1</entityID>
+        <classID>9</classID>
+        <title>VARA</title>
+        <comment>그려VARA, 불어VARA, 새로워진 옷을 VARA!\n핸드 드로잉 기반 패션 디자인 시뮬레이터 VARA와 함께 당신의 옷에 새로움을 불어넣어보세요.</comment>
+        <conceptComment>VARA에서 당신의 옷의 소름돋는 변신을 경험하세요!</conceptComment>
+        <teammates>
+            <person>김수민</person>
+            <person>차순우</person>
+            <person>홍유진</person>
+        </teammates>
+        <tag>install</tag>
+    </Assignment>
+
+    <Assignment id = "77">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>2</entityID>
+        <classID>9</classID>
+        <title>휴:식방</title>
+        <comment>우리의 감각은 쉴 날이 거의 없죠. 그렇기 때문에 휴:식방은 여러분에게 잠깐의 휴식을 드리고자 합니다. 정신없이 지나간 일년의 반, 휴:식방에서 쉼표를 끊고 가세요.</comment>
+        <conceptComment>이렇게 휴식하고 나면 돌아오는건? 계절학기 ㅎ</conceptComment>
+        <teammates>
+            <person>강수진</person>
+            <person>박석현</person>
+            <person>유채라</person>
+        </teammates>
+        <tag>install</tag>
+    </Assignment>
+
+    <Assignment id = "78">
+        <floor>1</floor>
+        <room>stair</room>
+        <entityID>3</entityID>
+        <classID>9</classID>
+        <title>vending machine</title>
+        <comment>돈을 내지 않아도 게임에서 승리하시면, 자판기에서 게임 속의 사탕이 현실로 굴러나옵니다. 게임을 play 하시겠습니까?</comment>
+        <conceptComment>본디 자판기란 원래 돈을 내고 사먹는 것입니다....</conceptComment>
+        <teammates>
+            <person>임지원</person>
+            <person>박진형</person>
+            <person>서희원</person>
+            <person>황인호</person>
+        </teammates>
+        <tag>install</tag>
+    </Assignment>
+
+    <Assignment id = "79">
+        <floor>3</floor>
+        <room>302</room>
+        <entityID>4</entityID>
+        <classID>9</classID>
+        <title>The Time Stone</title>
+        <comment>먼 우주를 떠돌아 다닌 당신, 기억을 잃기 전 당신은 타임스톤으로 시간을 바꿀 수 있었던 닥터 스트레인지였습니다. 시간을 바꿔 우주의 운명을 구원해주세요!</comment>
+        <conceptComment>혼자 만든 것이...아니다</conceptComment>
+        <teammates>
+            <person>강수진</person>
+        </teammates>
+        <tag>install</tag>
+    </Assignment>
+
+    <Assignment id = "80">
+        <floor>2</floor>
+        <room>center</room>
+        <entityID>0</entityID>
+        <classID>10</classID>
+        <title>매드 사이언티스트</title>
+        <comment>당신은 세상의 법칙을 거스르는 매드 사이언티스트! 그런 당신 곁을 지켜온 강아지 '지구'가 무지개 다리를 건너고 말았다… 아니 이럴 순 없어!! ‘지구’를 살려내고야 말겠어!! 함께 허공에 손을 휘저어 지구를 살려보자!</comment>
+        <conceptComment>모두의 취향을 한 곳에 모은 키메라...</conceptComment>
+        <teammates>
+            <person>유창원</person>
+            <person>유채라</person>
+            <person>조정윤</person>
+            <person>최상욱</person>
+            <person>홍민정</person>
+        </teammates>
+        <tag>game</tag>
+    </Assignment>
+
+    <Assignment id = "81">
+        <floor>2</floor>
+        <room>center</room>
+        <entityID>1</entityID>
+        <classID>10</classID>
+        <title>정문방구</title>
+        <comment>2000S 버스가 멈춘 이 곳은 바로?! '정문방구'! 현생에 찌들어가는 우리도 한 때 동심 가득, 쥬니어 네이버 세대였다! 그 시절 추억을 소환하는 '정문방구'에서 현실은 잠시 잊고 힐링하고 가세요~!</comment>
+        <conceptComment>그 시절 우리를 벌벌 떨게 한 빨간 마스크 등장?! 빨간 마스크가 당신을 쫓아옵니다. 얼른 얼른 피하세요~!!</conceptComment>
+        <teammates>
+            <person>김수림</person>
+            <person>서지원</person>
+            <person>신예은</person>
+            <person>백지수</person>
+            <person>이하연</person>
+        </teammates>
+        <tag>game</tag>
+    </Assignment>
+
+    <Assignment id = "82">
+        <floor>2</floor>
+        <room>center</room>
+        <entityID>2</entityID>
+        <classID>10</classID>
+        <title>PENG</title>
+        <comment>학점을 시원하게 말아먹고 잔소리를 피해 가출한 펭! 눈 떠보니 여의도 한강공원이다. 과연 펭이는 사람들의 눈을 피해 남극 수송 차량까지 무사히 도착할 수 있을까? 귀염 뽀짝한 울희 펭이 집에 보내주세요!!</comment>
+        <conceptComment>게임에 사용된 이미지 개수가 무려 200개이다..?</conceptComment>
+        <teammates>
+            <person>박준영</person>
+            <person>신영채</person>
+            <person>이용희</person>
+            <person>이재인</person>
+            <person>정윤지</person>
+        </teammates>
+        <tag>game</tag>
+    </Assignment>
+
+    <Assignment id = "83">
+        <floor>2</floor>
+        <room>center</room>
+        <entityID>3</entityID>
+        <classID>10</classID>
+        <title>Mr 초밥왕</title>
+        <comment>벌써 서류광탈만 30번째... 이럴바에야 자영업을 해보는 건 어떨까? 평소 덕질을 일삼던 초밥으로 성공의 길에 다가가보자!</comment>
+        <conceptComment>소름돋는 현실고증 청년 수난 게임</conceptComment>
+        <teammates>
+            <person>고은지</person>
+            <person>김선영</person>
+            <person>백승호</person>
+            <person>유은이</person>
+            <person>한지인</person>
+        </teammates>
+        <tag>game</tag>
+    </Assignment>
+
+    <Assignment id = "84">
+        <floor>2</floor>
+        <room>center</room>
+        <entityID>4</entityID>
+        <classID>10</classID>
+        <title>김옥연의 삶</title>
+        <comment>삶을 마무리짓는 시점에서, 김옥연씨는 자신의 생을 한 편의 시로 정리하기로 한다. 한번도 시를 읽어본 적 없는 손녀를 위해, 손녀가 자신을 조금 더 이해할 수 있기를 바라면서. 그녀의 삶의 다섯 장면 속으로 들어가 시를 완성해보자!</comment>
+        <conceptComment>사실 이 시는 고양이가 썼습니다 저희는 그저 시키는 대로 했을 뿐입니다 냥냥</conceptComment>
+        <teammates>
+            <person>김지수</person>
+            <person>신윤주</person>
+            <person>정상현</person>
+            <person>최성운</person>
+        </teammates>
+        <tag>game</tag>
+    </Assignment>
+
+    <Assignment id = "85">
+        <floor>2</floor>
+        <room>center</room>
+        <entityID>5</entityID>
+        <classID>10</classID>
+        <title>iColor</title>
+        <comment>iColor 연구소에서는 여러분의 마음 빛깔에 따른 퍼스널컬러를 찾아드립니다. 다양한 테스트를 통해 여러분만의 색깔 진단서를 받아보세요!</comment>
+        <conceptComment>다른 사람의 색을 찾아주는 프로그램을 만들면서 조원들의 낯빛은 사라져갔다 ... (?)</conceptComment>
+        <teammates>
+            <person>권혁범</person>
+            <person>백창인</person>
+            <person>유정은</person>
+            <person>윤여원</person>
+            <person>이기은</person>
+        </teammates>
+        <tag>game</tag>
+    </Assignment>
+
+    <Assignment id = "86">
+        <floor>2</floor>
+        <room>center</room>
+        <entityID>6</entityID>
+        <classID>10</classID>
+        <title>미레도시 : Colorize</title>
+        <comment>먼 미래,  인류는 여유를 잃고 세상은 삭막해져간다. 어느날, 지구의 색이 하루 아침에 사라졌다. 세계 정부는 과거로 당신을 보내 색을 가지고 오기로 결정하는데... \n과거에서 색을 모아온 당신, 이제 리듬에 맞춰 도시에 색을 불어넣어라!</comment>
+        <conceptComment>놀랍게도 우리는 첫 회의 때 게임은 만들지 말자고 했다.</conceptComment>
+        <teammates>
+            <person>구보림</person>
+            <person>송지현</person>
+            <person>이수민</person>
+            <person>함호준</person>
+        </teammates>
+        <tag>game</tag>
+    </Assignment>
+
+    <Assignment id = "87">
+        <floor>2</floor>
+        <room>center</room>
+        <entityID>7</entityID>
+        <classID>10</classID>
+        <title>노선생의 인연 연구소</title>
+        <comment>도대체 전생에 우리는 어떤 웬수였길래 지금 이런 사이가 되었지? 노선생께서 속 시원하게 알려드립니다.</comment>
+        <conceptComment>조교님 왜 저희를 불러놓고 안오셨나요..? (6월 8일 2시경...)</conceptComment>
+        <teammates>
+            <person>노준현</person>
+            <person>원은재</person>
+            <person>오혜정</person>
+            <person>허현준</person>
+        </teammates>
+        <tag>game</tag>
+    </Assignment>
+
+    <Assignment id = "88">
+        <floor>1</floor>
+        <room>center</room>
+        <entityID>0</entityID>
+        <classID>11</classID>
+        <title>토미쿠쿠(Tummy Cuckoo)</title>
+        <comment>섭식장애와 위험군을 대상으로 적정량의 식사를 규칙적으로 하도록 돕는 식습관 관리 서비스입니다.</comment>
+        <conceptComment>너무 소름 돋을 만큼 소름 돋을 만한 점이 없어서 소름 아닐까...?</conceptComment>
+        <teammates>
+            <person>노하경</person>
+            <person>송민경</person>
+            <person>정지훈</person>
+            <person>최한종</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+    </Assignment>
+
+    <Assignment id = "89">
+        <floor>1</floor>
+        <room>center</room>
+        <entityID>1</entityID>
+        <classID>11</classID>
+        <title>마음 키우기</title>
+        <comment>20대 취업준비생과 고시준비생을 위한, ACT 심리치료 기법으로 내 마음을 형상화한 마음 캐릭터를 키우는 육성게임</comment>
+        <conceptComment>6/30 종강</conceptComment>
+        <teammates>
+            <person>고이경</person>
+            <person>조정윤</person>
+            <person>배수경</person>
+            <person>이수연</person>
+        </teammates>
+        <tag>game</tag>
+        <tag>poster</tag>
+    </Assignment>
+
+    <Assignment id = "90">
+        <floor>1</floor>
+        <room>center</room>
+        <entityID>2</entityID>
+        <classID>11</classID>
+        <title>삶은 달걀</title>
+        <comment>신체 활동 및 자기 효능감 증진을 통해 번아웃 회복과 예방을 돕는 활동 가이드 앱</comment>
+        <conceptComment>프로젝트 회의록만 37개... 우리에게도 번아웃이 왔다!</conceptComment>
+        <teammates>
+            <person>박다희</person>
+            <person>서지희</person>
+            <person>송모연</person>
+            <person>정영록</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "91">
+        <floor>1</floor>
+        <room>center</room>
+        <entityID>3</entityID>
+        <classID>11</classID>
+        <title>자조행동발달을 위한 일상생활놀이</title>
+        <comment>인지능력을 기를 필요가 있는 아동 대상으로 일상생활에서의 자조능력을 향상시키기 위한 게임</comment>
+        <conceptComment>운전기사가 없어서 바퀴가 네모난 버스와 같은 우리조 사랑합니다</conceptComment>
+        <teammates>
+            <person>곽태원</person>
+            <person>김찬영</person>
+            <person>배규태</person>
+            <person>서용삼</person>
+            <person>오승연</person>
+        </teammates>
+        <tag>game</tag>
+        <tag>poster</tag>
+    </Assignment>
+
+    <Assignment id = "92">
+        <floor>1</floor>
+        <room>center</room>
+        <entityID>4</entityID>
+        <classID>11</classID>
+        <title>MEDIHAND</title>
+        <comment>발달장애 아동의 의료기록을 모아 관리하는 통합 PHR 플랫폼</comment>
+        <conceptComment>인터뷰를 위해 이동한 총 거리 = 328km, 총 이동시간 = 약 12시간</conceptComment>
+        <teammates>
+            <person>고은지</person>
+            <person>박서라</person>
+            <person>유은이</person>
+            <person>정지영</person>
+        </teammates>
+        <tag>poster</tag>
+        <tag>prototype</tag>
+    </Assignment>
+
+    <Assignment id = "93">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>0</entityID>
+        <classID>12</classID>
+        <title>내가 사는 곳이..? : 대학가 ‘근생' 무단 용도변경</title>
+        <comment>여러 형태의 주택에 거주하는 학생들. 그러나 그 중 주택이 아닌 곳이 있다? 모두가 알고 있지만 말하지 않는 '근린생활시설 무단/불법 용도 변경'을 파헤쳐 본다.</comment>
+        <conceptComment>..그는 좋은 고프로 'chesty' 였습니다..</conceptComment>
+        <teammates>
+            <person>박현</person>
+            <person>한민경</person>
+            <person>이혜연</person>
+            <person>신경연</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "94">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>1</entityID>
+        <classID>12</classID>
+        <title>베일에 싸인 글로벌사회공헌단, 그리고 iTEC</title>
+        <comment>글로벌사회공헌단은 대체 어떤 기준으로 지원•파견 국가를 선정하는 것일까. 작은 의문에서 시작한 취재는 글로벌사회공헌단과 1억 원짜리 계약을 맺은 협력업체 iTEC에 대한 더 큰 물음표를 남겼다. 그 실상을 파악해본다.</comment>
+        <conceptComment>국회의원실에 연락했는데...고작 과제였다...</conceptComment>
+        <teammates>
+            <person>김건우</person>
+            <person>박혜준</person>
+            <person>한지인</person>
+            <person>황세연</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "95">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>2</entityID>
+        <classID>12</classID>
+        <title>서울대학교 근로장학생 불공정 선발 실태</title>
+        <comment>일년 예산 평균 40억. 선발 인원 평균 1000명. 무엇보다 공정해야 하는 근로'장학금'. 우리 주변에서 빈번하게 발생하고 있는 근로장학생 불공정 선발 실태를 파헤쳐 보자.</comment>
+        <conceptComment>왜 자세한 장학금 선발 과정을 학생들에게 공개하지 않을까??</conceptComment>
+        <teammates>
+            <person>박재웅</person>
+            <person>윤창현</person>
+            <person>이종택</person>
+            <person>조민기</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "96">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>3</entityID>
+        <classID>12</classID>
+        <title>가짜학회 사태, 서울대 교수들에게 물었다</title>
+        <comment>가짜학회 논문 게재, 학술대회 참가 모두 서울대학교가 국내 1위?  “학회 참여, 하셨습니까?” 연구자들에게 직접 물었다. 서울대학교 가짜학회 사태의 실상과 원인을 들여다 본다.</comment>
+        <conceptComment>시흥 가면 돌이킬 수 없잖아요^^ - [충격/공포/실화] 중간 발표 이후에 주제가 바뀐 팀이 있다?</conceptComment>
+        <teammates>
+            <person>김영은</person>
+            <person>이재인</person>
+            <person>정우주</person>
+            <person>최종열</person>
+        </teammates>
+        <tag>video</tag>
+    </Assignment>
+
+    <Assignment id = "97">
+        <floor>2</floor>
+        <room>201</room>
+        <entityID>4</entityID>
+        <classID>12</classID>
+        <title>반복되는 서울대 교수 성범죄, 제대로 된 징계는 없었다?</title>
+        <comment>8년째 재정되지 않은 서울대 교원 징계 규정. 심지어 성범죄를 저지르고 징계 절차 조차 밟지 않은 교수가 있다? 권력형 성폭력 속 불합리한 교원 징계 제도, 그 실태를 알아보았다.</comment>
+        <conceptComment>성범죄 교수한테 전화 걸음.</conceptComment>
+        <teammates>
+            <person>김수정</person>
+            <person>배주영</person>
+            <person>송모연</person>
+            <person>오시원</person>
+        </teammates>
+        <tag>video</tag>
     </Assignment>
 
 </Assignments>

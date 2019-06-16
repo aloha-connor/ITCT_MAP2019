@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Map
+    uniqueID: 1819358105
+    locked: 0
   - name: AssignmentEntity
     uniqueID: 3935191837
+    locked: 0
+  - name: EditorUI
+    uniqueID: 2184828837
     locked: 0

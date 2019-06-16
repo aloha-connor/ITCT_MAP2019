@@ -21,7 +21,7 @@ namespace ITCT
                 Assignment newAss = new Assignment();
                 newAss.id = IntParseNode(node,"@id");
                 newAss.floor = int.Parse(node.SelectSingleNode("floor").InnerText);
-                newAss.room = int.Parse(node.SelectSingleNode("room").InnerText);
+                //newAss.room = int.Parse(node.SelectSingleNode("room").InnerText);
                 // newAss.pos = 
                 //     new Vector2(
                 //         float.Parse(node.SelectSingleNode("room/@x").InnerText),
@@ -31,7 +31,9 @@ namespace ITCT
                 newAss.assignmentEntityID = IntParseNode(node,"entityID");
                 newAss.title = node.SelectSingleNode("title").InnerText;
                 newAss.comment = node.SelectSingleNode("comment").InnerText;
+                newAss.comment = newAss.comment.Replace("\\n", "\n");
                 newAss.conceptComment = node.SelectSingleNode("conceptComment").InnerText;
+                newAss.conceptComment = newAss.conceptComment.Replace("\\n", "\n");
                 newAss.teamMates = new List<string>();
                 newAss.assignmentTagMask = GetAssignmentTagMask(node);
                 XmlNodeList teamMatesList = node.SelectNodes("teammates/person");

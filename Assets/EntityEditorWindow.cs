@@ -35,18 +35,19 @@ namespace ITCT
             editorSystem.SubjectAssignmentEntityRendererSelected_Edit.AsObservable()
                 .Subscribe(entity =>
                 {
+                    SaveAssEntity();
                     LoadAssEntity(entity);
                     transform.localScale = new Vector2(1, 1);
                 });
 
-            editorSystem.currentMode.AsObservable()
-                .Subscribe(mode => {
-                    InputField[] fields = GetComponentsInChildren<InputField>();
-                    foreach(InputField f in fields)
-                    {
-                        f.readOnly = !(mode == EditorSystem.EditMode.VALUES) ;
-                    }
-                });
+            // editorSystem.currentMode.AsObservable()
+            //     .Subscribe(mode => {
+            //         InputField[] fields = GetComponentsInChildren<InputField>();
+            //         foreach(InputField f in fields)
+            //         {
+            //             f.readOnly = !(mode == EditorSystem.EditMode.VALUES) ;
+            //         }
+            //     });
         }
 
         protected void LoadAssEntity(AssignmentEntityRenderer entityRenderer)
@@ -92,6 +93,16 @@ namespace ITCT
                     if(float.TryParse(_rad, out radOut))
                         currentRenderer.GetComponentInChildren<SpriteRenderer>().size = 
                             new Vector2(radOut, currentRenderer.GetComponentInChildren<SpriteRenderer>().size.y);
+                });
+
+            rad.ObserveEveryValueChanged(__ => __.text)
+                .Where(__ => currentRenderer.myType == AEType.computer)
+                .Where(__ => editorSystem.currentMode.Value == EditorSystem.EditMode.VALUES)
+                .Subscribe(_rad => {
+                    float radOut ;
+                    if(float.TryParse(_rad, out radOut))
+                        currentRenderer.GetComponentInChildren<SpriteRenderer>().size = 
+                            new Vector2(radOut, radOut) * 2;
                 });
 
             entityRenderer.ObserveEveryValueChanged(__ => __.transform.localPosition)
@@ -147,25 +158,57 @@ namespace ITCT
 			int dummyInt ; float dummyFloat;
 
 			flag = int.TryParse(id.text, out dummyInt);
-			if(!flag) return false;
+			if(!flag) 
+            {
+                editorSystem.SendWarningMessage("ID값이 유효하지 않습니다.");
+                return false;
+            }
 			flag = dummyInt == currentEntity.aeID || !editorSystem.mapSystem.assignmentEntityDictionary.ContainsKey(dummyInt);
-			if(!flag) return false;
+			if(!flag) 
+            {
+                editorSystem.SendWarningMessage("ID값이 중복되었습니다.");
+                return false;
+            }
 			flag = int.TryParse(floor.text, out dummyInt);
-			if(!flag) return false;
+			if(!flag) 
+            {
+                editorSystem.SendWarningMessage("Floor값이 유효하지 않습니다.");
+                return false;
+            }
 			flag = float.TryParse(rad.text, out dummyFloat);
-			if(!flag) return false;
+			if(!flag) 
+            {
+                editorSystem.SendWarningMessage("rad값이 유효하지 않습니다.");
+                return false;
+            }
 			flag = float.TryParse(rot.text, out dummyFloat);
-			if(!flag) return false;
+			if(!flag) 
+            {
+                editorSystem.SendWarningMessage("rot값이 유효하지 않습니다.");
+                return false;
+            }
 			flag = float.TryParse(posX.text, out dummyFloat);
-			if(!flag) return false;
+			if(!flag) 
+            {
+                editorSystem.SendWarningMessage("posX값이 유효하지 않습니다.");
+                return false;
+            }
 			flag = float.TryParse(posY.text, out dummyFloat);
-			if(!flag) return false;
+			if(!flag) 
+            {
+                editorSystem.SendWarningMessage("posY값이 유효하지 않습니다.");
+                return false;
+            }
             string[] a = assignments.text.Split(' ');
             foreach (string s in a) 
 			{
 				if(s.Equals("")) continue;
 				flag = int.TryParse(s, out dummyInt);
-				if(!flag) return false;
+				if(!flag) 
+                {
+                    editorSystem.SendWarningMessage("Assignments ID가 유효하지 않습니다.");
+                    return false;
+                }
 			}
 			return true;
 		}

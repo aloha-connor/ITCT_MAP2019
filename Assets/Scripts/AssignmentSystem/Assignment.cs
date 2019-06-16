@@ -15,7 +15,9 @@ namespace ITCT
         public Vector2 pos;
         public string title;
         public List<string> teamMates;
+        [TextArea]
         public string comment;
+        [TextArea]
         public string conceptComment;
         public int assignmentTagMask;
     }
