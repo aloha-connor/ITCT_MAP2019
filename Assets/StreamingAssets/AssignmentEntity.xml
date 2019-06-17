@@ -75,7 +75,7 @@
 <floor>2</floor>
 <shape>
 <point x = "16.49918" y = "11.47789" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -98,7 +98,7 @@
 <floor>2</floor>
 <shape>
 <point x = "17.7" y = "7.9" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -109,7 +109,7 @@
 <floor>2</floor>
 <shape>
 <point x = "19.2" y = "7.9" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -120,7 +120,7 @@
 <floor>2</floor>
 <shape>
 <point x = "20.6816" y = "7.9" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -131,7 +131,7 @@
 <floor>2</floor>
 <shape>
 <point x = "1.380722" y = "0" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -154,7 +154,7 @@
 <floor>2</floor>
 <shape>
 <point x = "4.260428" y = "0" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -190,7 +190,7 @@
 <floor>2</floor>
 <shape>
 <point x = "10.5" y = "5.1" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -201,7 +201,7 @@
 <floor>2</floor>
 <shape>
 <point x = "10.5" y = "6.266994" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -226,7 +226,7 @@
 <floor>2</floor>
 <shape>
 <point x = "20" y = "6.3" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -237,7 +237,7 @@
 <floor>2</floor>
 <shape>
 <point x = "18.8" y = "6.3" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -248,7 +248,7 @@
 <floor>2</floor>
 <shape>
 <point x = "17.6" y = "6.3" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -259,7 +259,7 @@
 <floor>2</floor>
 <shape>
 <point x = "17" y = "5.2" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>
@@ -270,7 +270,7 @@
 <floor>2</floor>
 <shape>
 <point x = "17" y = "4" />
-<radius r = "0.15" />
+<radius r = "0.12" />
 <theta t = "0" />
 </shape>
 <assignments>

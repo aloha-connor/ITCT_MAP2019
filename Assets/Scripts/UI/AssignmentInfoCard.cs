@@ -24,6 +24,8 @@ namespace ITCT
 
         protected static float gap = 5f;
 
+        protected Color defaultColor ;
+
         void Awake()
         {
             infoCard = GetComponent<InfoCard>();
@@ -31,6 +33,8 @@ namespace ITCT
             infoCard.id.AsObservable()
                 .Where(i => i >= 0)
                 .Subscribe(i => UpdateCardContents(i));
+
+            defaultColor = GetComponent<Image>().color;
         }
 
         void Start()
@@ -52,6 +56,12 @@ namespace ITCT
 
 			GetComponent<Button>().onClick
 				.AddListener(() => infoCard.myViewer.infoSystem.InfoCardSelected(infoCard.id.Value));
+
+            infoCard.myViewer.infoSystem.SelectedAssignmentID.AsObservable()
+                .Subscribe(_id => {
+                    Color targetColor = _id == infoCard.id.Value ? defaultColor * 2f : defaultColor;
+                    GetComponent<Image>().DOColor(targetColor, .5f);
+                });
         }
 
         protected void UpdateCardContents(int id)

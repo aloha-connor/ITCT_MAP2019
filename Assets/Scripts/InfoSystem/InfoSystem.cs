@@ -22,6 +22,8 @@ namespace ITCT
 
 		public ReactiveProperty<bool> showDetail;
 
+		public ReactiveProperty<bool> queriedByEntity;
+
         public TagSelector tagSelector;
 
         public InputField searchInputField;
@@ -32,6 +34,7 @@ namespace ITCT
             SelectedAssignmentID = new ReactiveProperty<int>();
 			listByName = new ReactiveProperty<bool>(false);
             showDetail = new ReactiveProperty<bool>(false);
+            queriedByEntity = new ReactiveProperty<bool>(false);
         }
 
         void Start()
@@ -51,10 +54,17 @@ namespace ITCT
 					else Search();
 				});
 
+            queriedByEntity.AsObservable()
+                .Where(flag => !flag)
+                .Subscribe(flag => {
+                    if(!listByName.Value) UpdateQueried(QueryDefault(tagSelector.tagMask.Value));
+                    else Search();
+                });
+
             searchInputField.onEndEdit
                 .AddListener((s) => Search());
 
-            mapSystem.SubjectAssignmentEntityRendererSelected.AsObservable()
+            mapSystem.SubjectAssignmentEntityRendererClicked.AsObservable()
                 .Subscribe(ent => {
                     AssignmentEntity entity = mapSystem.assignmentEntityDictionary[ent.aeID];
                     UpdateQueried(QueryByList(entity.assignmentIDList));
@@ -63,11 +73,13 @@ namespace ITCT
 
 		public void ListAll()
 		{
+            queriedByEntity.Value = false;
 			listByName.Value = false;
 		}
 
 		public void ListName()
 		{
+            queriedByEntity.Value = false;
 			listByName.Value = true;
 		}
 
@@ -108,6 +120,7 @@ namespace ITCT
 
         protected ICollection<int> QueryByList(List<int> list)
         {
+            queriedByEntity.Value = true;
             List<Assignment> queriedByList =
                                 assignmentSystem.assignmentList
                                     .Where(a => list.Contains(a.id))
@@ -128,12 +141,13 @@ namespace ITCT
 
             while (orderedQueried.MoveNext())
             {
-                if (orderedQueried.Current.classID != currentClass)
+                Assignment current = orderedQueried.Current;
+                if (current.classID != currentClass)
                 {
-                    result.Add(orderedQueried.Current.classID + 1000);
-                    currentClass = orderedQueried.Current.classID;
+                    result.Add(current.classID + 1000);
+                    currentClass = current.classID;
                 }
-                result.Add(orderedQueried.Current.id);
+                result.Add(current.id);
                 if(SelectedAssignmentID.Value == orderedQueried.Current.id) currentSelectedQueried = true;
             }
 

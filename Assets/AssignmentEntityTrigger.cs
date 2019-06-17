@@ -36,7 +36,7 @@ namespace ITCT
             pointerDown.eventID = EventTriggerType.PointerDown;
             pointerDown.callback.AddListener((eventData) => { 
                 GetComponent<AssignmentEntityRenderer>().mapSystem
-                    .SelectAssignmentEntityRenderer(GetComponent<AssignmentEntityRenderer>());
+                    .ClickAssignmentEntityRenderer(GetComponent<AssignmentEntityRenderer>());
 			});
 
             eventTrigger.triggers.Add(pointerEnter);

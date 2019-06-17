@@ -17,6 +17,7 @@ namespace ITCT
         public ReactiveProperty<int> currentFloor { get; protected set; }
 
         public Subject<AssignmentEntityRenderer> SubjectAssignmentEntityRendererSelected { get; protected set; }
+        public Subject<AssignmentEntityRenderer> SubjectAssignmentEntityRendererClicked { get; protected set; }
         public Subject<int> SubjectAssignmentEntityModified { get; protected set; }
 
         protected AssignmentEntityXMLParser xmlParser;
@@ -27,6 +28,7 @@ namespace ITCT
             string xmlText = LoadXMLFile();
             assignmentEntityDictionary = MakeDictionary(xmlParser.ParseXML(xmlText));
             SubjectAssignmentEntityRendererSelected = new Subject<AssignmentEntityRenderer>();
+            SubjectAssignmentEntityRendererClicked = new Subject<AssignmentEntityRenderer>();
             SubjectAssignmentEntityModified = new Subject<int>();
             currentFloor = new ReactiveProperty<int>(1);
         }
@@ -58,6 +60,11 @@ namespace ITCT
         public void SelectAssignmentEntityRenderer(AssignmentEntityRenderer r)
         {
             SubjectAssignmentEntityRendererSelected.OnNext(r);
+        }
+
+        public void ClickAssignmentEntityRenderer(AssignmentEntityRenderer r)
+        {
+            SubjectAssignmentEntityRendererClicked.OnNext(r);
         }
 
         public void SetCurrentFloor(int f)

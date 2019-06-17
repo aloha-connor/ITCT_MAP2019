@@ -70,14 +70,22 @@ namespace ITCT
             mapSystem.currentFloor.AsObservable()
                 .Subscribe(f => {
                     Vector2 targetScale = InCurrentFloor() ? new Vector2(1,1) : Vector2.zero;
-                    transform.DOScale(targetScale, .8f)
-                        .SetEase(Ease.InOutElastic);
+                    Ease ease = InCurrentFloor() ? Ease.OutBack : Ease.InBack;
+                    transform.DOScale(targetScale, .3f)
+                        .SetEase(ease);
                 }).AddTo(compDisp);
 
             mapSystem.SubjectAssignmentEntityModified.AsObservable()
                 .Where(id => id == aeID)
                 .Subscribe(id => {
                     Initialize(id, infoSystem, mapSystem);
+                }).AddTo(compDisp);
+
+            selected.AsObservable()
+                .Where(flag => flag)
+                .Subscribe(flag => {
+                    mapSystem.SetCurrentFloor(mapSystem.assignmentEntityDictionary[aeID].floor);
+                    mapSystem.SelectAssignmentEntityRenderer(this);
                 }).AddTo(compDisp);
 
             infoSystem.SubjectQueriedAssignmentsChanged.AsObservable()

@@ -104,7 +104,7 @@ namespace ITCT
                     editorCanvas.SetActive(flag);
                 });
 
-            mapSystem.SubjectAssignmentEntityRendererSelected.AsObservable()
+            mapSystem.SubjectAssignmentEntityRendererClicked.AsObservable()
                     .Where(__ => editorOn.Value)
                     .Subscribe(ent =>
                     {
